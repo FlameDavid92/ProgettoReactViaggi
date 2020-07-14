@@ -51,15 +51,17 @@ export default function App() {
 					</MyContext.Provider>
 					<div className="container-fluid">
 						<MyContext.Provider value={{ travelGeoCenter: travelGeoCenter, citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
-							<div className="anchor" id="mappa"/>
-							<MyTravel></MyTravel>
+							<div id="mappa">
+								<MyTravel></MyTravel>
+							</div>
 						</MyContext.Provider>
 						<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
-							<div className="anchor" id="referente"/>
-							<Referente></Referente>
+							<div id="referente">
+								<Referente></Referente>
+							</div>
 						</MyContext.Provider>
-						<div className="anchor" id="viaggio"/>
-						<div className="row">
+
+						<div className="row" id="viaggio">
 							<div className="col col-12">
 								{
 									arrayCitta.map((citta, i) => {
@@ -102,8 +104,8 @@ export default function App() {
 
 							</div>
 						</div>
-						<div className="anchor" id="info"/>
-						<div className="row mr-0 ml-0" id="info">
+						<div id="info"></div>
+						<div className="row mr-0 ml-0" >
 							<MyContext.Provider value={{ nome: "TARIFFE" }}>
 								<Accordion tipo="info">
 									<div className="row">

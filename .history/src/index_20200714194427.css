@@ -141,6 +141,6 @@ body {
 div.anchor {
     display: block;
     position: relative;
-    top: -6vh;
+    top: -250px;
     visibility: hidden;
 }

@@ -51,8 +51,9 @@ export default function App() {
 					</MyContext.Provider>
 					<div className="container-fluid">
 						<MyContext.Provider value={{ travelGeoCenter: travelGeoCenter, citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
-							<div className="anchor" id="mappa"/>
-							<MyTravel></MyTravel>
+							<div id="mappa">
+								<MyTravel></MyTravel>
+							</div>
 						</MyContext.Provider>
 						<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 							<div className="anchor" id="referente"/>

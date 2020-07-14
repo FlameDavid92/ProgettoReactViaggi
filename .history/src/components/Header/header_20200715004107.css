@@ -1,5 +1,5 @@
 .cover {
-    height: calc(100vh - var(--myheight-navbar));
+    height: 100%;
     width: auto;
     background-position: center;
     background-size: cover;

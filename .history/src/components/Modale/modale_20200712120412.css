@@ -1,0 +1,13 @@
+.containerModale{
+    position: initial;
+    z-index: 3;
+    width: 100vh;
+    height: 100vw;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(56, 56, 56, 0.116);
+}
+.modale{
+    z-index: 3;
+}

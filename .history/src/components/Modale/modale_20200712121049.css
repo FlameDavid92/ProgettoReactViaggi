@@ -1,0 +1,20 @@
+.containermodale{
+    width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#f7f7f7;
+ position:absolute;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+    
+    z-index: 3;
+    
+    margin: 0;
+    padding: 0;
+    background-color: rgba(56, 56, 56, 0.116);
+}
+.modale{
+    z-index: 3;
+}

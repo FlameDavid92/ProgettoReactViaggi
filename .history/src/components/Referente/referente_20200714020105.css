@@ -1,0 +1,23 @@
+
+.reference-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.separatore-card {
+    border-right: 1px solid #8898aa70;
+    height: 25vh;
+}
+
+.info-azienda {
+    padding-left: 80px;
+    padding-top: 15px;
+}
+
+.orange-color {
+    color: orange;
+}
+
+.little {
+    font-size: 14px;
+}

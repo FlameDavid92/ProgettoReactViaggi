@@ -1,0 +1,36 @@
+body {
+ background-color: #f5f6fb;
+}
+
+.color-orange{
+color: #ffb400;
+}
+
+.title{
+font-size: 24px;
+font-family: 'Roboto';
+}
+.subTitle{
+    font-size: 20px!important;
+}
+.date-text{
+    font-size: 24px !important;
+    color: #8898AA !important; 
+    font-weight: 300 !important;
+}
+
+.img-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    
+}
+
+.container-fluid {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}

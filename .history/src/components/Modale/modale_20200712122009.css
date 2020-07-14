@@ -1,0 +1,18 @@
+.containermodale {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(56, 56, 56, 0.438);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+}
+
+.modale {
+    position: relative;
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    background:#f7f7f7;
+    z-index: 3;
+}

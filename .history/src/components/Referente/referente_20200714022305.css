@@ -1,0 +1,20 @@
+
+.reference-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.separatore-card {
+    border-right: 1px solid #8898aa70;
+    height: 25vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .separatore-card {
+        height: 50vh;
+    }
+}
+
+.orange-color {
+    color: orange;
+}

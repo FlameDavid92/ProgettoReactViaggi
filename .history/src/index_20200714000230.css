@@ -1,0 +1,67 @@
+/* BODY E CONTAINER-FLUID */
+body {
+    background-color: #f5f6fb;
+}
+
+.container-fluid {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* COLORI */
+.color-orange {
+    color: #ffb400;
+}
+
+.color-text-grey {
+    color: #8898AA;
+}
+
+/* TITOLI E TESTI */
+.bigTitle{
+    font-size: 42px;
+    font-family: 'Roboto';
+}
+@media screen and (max-width: 768px) {
+    .bigTitle{
+        font-size: 36px;
+        font-family: 'Roboto';
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-family: 'Roboto';
+}
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+}
+
+.subTitle {
+    font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+    .subTitle {
+        font-size: 16px;
+    }    
+}
+
+/*DA RIVEDERE...*/
+.date-text {
+    font-size: 24px;
+    color: #8898AA;
+    font-weight: 300;
+}
+
+.img-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+}

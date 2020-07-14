@@ -1,0 +1,9 @@
+.leaflet-container {
+    
+    height: 75vh;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+}

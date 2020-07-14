@@ -5,7 +5,7 @@ import './navbar.css';
 export default function NavBar({ navlinks }) {
     return (
         <nav className="navbar sticky-top navbar-expand navbar-light my-nav">
-            <img className="navbar-brand logo" src="./logo.png" alt="logo"/>
+            <div className="navbar-brand" to="#">Navbar</div>
             <div className="collapse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
                     {navlinks.map((link, i) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './navbar.css';
 
-export default function NavBar({ navlinks }) {
+export default function NavBar({ navlinks,currentHover }) {
     const logout = () => {
         window.sessionStorage.removeItem('user');
         window.location.href = "/";
@@ -16,7 +16,7 @@ export default function NavBar({ navlinks }) {
                         return (
                             <li key={i} className="nav-item">
                                 <NavLink className="nav-link" key={i + 1} 
-                                to={"/#" + link.id}><span className="tiny-text link-hover">{link.nome}</span></NavLink>
+                                to={"/#" + link.id}><span className={"tiny-text link-hover "+((currentHover == link.id)?'my-active':'')}>{link.nome}</span></NavLink>
                             </li>
                         )
                     })}

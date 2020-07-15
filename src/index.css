@@ -186,5 +186,8 @@ div.anchor {
     display: block;
     position: relative;
     top: calc(-1 * var(--myheight-navbar));
-    visibility: hidden;
+}
+
+.my-active {
+    background-color: rgba(236, 85, 85, 0.911)
 }

@@ -1,0 +1,8 @@
+.my-nav {
+    background-color:  rgba(248, 249, 250, 0.8);
+    height: var(--myheight-navbar);
+}
+
+.nav-link:hover{
+    color: rgb(151, 10, 14);
+}

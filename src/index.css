@@ -131,6 +131,13 @@ body {
     object-fit: cover;
 }
 
+.medium-img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
 .tiny-icon {
     width: 150px;
     height: auto;

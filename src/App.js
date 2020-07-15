@@ -17,6 +17,7 @@ import './App.css';
 const urlJSON = 'http://51.77.82.133:86/api/quotations/QUO_5e5e2952ae57f#'
 
 export default function App() {
+	var x = 1
 	//sto creando una variabile di stato e la inizializzo ad un oggetto vuoto
 	const [datiJson, setDatiJson] = useState(null);
 	const [arrayCitta, setArrayCitta] = useState([]);
@@ -58,9 +59,11 @@ export default function App() {
 						<div className="anchor" id="viaggio" />
 						<div className="row">
 							<div className="col col-12">
-								{arrayCitta.map((citta, i) => {
+							
+								{arrayCitta.map((citta,counter) => {
+									
 									return (
-										<div key={i + "div"}>
+										<div key={counter + "div"}>
 											<MyContext.Provider value={citta}>
 												<Accordion key={citta.id} tipo="citta">
 													{citta.giorni.map((giorno, i) => {
@@ -68,8 +71,9 @@ export default function App() {
 															<div key={i + "div"}>
 																<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
 																	<div className="row">
+
 																		<div className="col-1">
-																			<Dayline giorno={i+1} attivita={giorno.activities.length} transports={giorno.transports} end={(i+1) === citta.giorni.length}/>
+																			<Dayline giorno={x++} attivita={giorno.activities.length} transports={giorno.transports} end={(i+1) === citta.giorni.length}/>
 																		</div>
 																		<div className="col-11">
 																			<DayCard boleano={i < 1} key={giorno.id} />
@@ -83,6 +87,7 @@ export default function App() {
 											</MyContext.Provider>
 										</div>
 									)
+
 								})}
 							</div>
 						</div>

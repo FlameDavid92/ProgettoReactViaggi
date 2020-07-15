@@ -9,7 +9,7 @@ export default function Dayline({giorno,attivita,transports,end}) {
     return (
         <>
             <div className="row dayline-row align-items-center justify-content-center">
-                <div className='col-12 day-circle text-white'>Day</div>
+    <div className='col-12 day-circle text-white'>Day {giorno }</div>
                 {Array(attivita).fill(null).map(att =>{
                     return <div className='col-12 activity-circle '><FontAwesomeIcon icon={faMapMarker}></FontAwesomeIcon></div>
                 })}

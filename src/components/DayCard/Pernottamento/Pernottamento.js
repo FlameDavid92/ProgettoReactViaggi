@@ -30,8 +30,13 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                             <button className='btn btn-outline-primary disabled'>{acc.places[0].name}</button>
                             <p>{acc.description}..<Link to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link></p>
                             <Modale click={modPernottamento}>
+                                <div className="row">
+                                    <div className="col-8 offset-2"> 
                                 <Slider images={acc.images}></Slider>
                                 <p>{acc.description}</p>
+
+                                    </div>
+                                </div>
                             </Modale>
                         </div>
                     </div>

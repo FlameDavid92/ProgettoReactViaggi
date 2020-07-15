@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './modale.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTimes} from '@fortawesome/free-solid-svg-icons'
 
 export default function Modale({children,click}){
     const [opened, setOpened] = useState(false);
@@ -14,10 +16,16 @@ export default function Modale({children,click}){
     return(
         opened ? (
             <div className="containermodale">
-            <div className="modale shadow">
-                <button className="btn btn-danger" onClick={chiudiModale}>X</button>
-            </div>
-            <div>
+            <div className="modale  shadow">
+                <div  onClick={chiudiModale}>
+                    <div className="row justify-content-end">
+
+                    <div className=" chiudi col-2 mt-2 mx-4 p-1 text-center shadow text-primary">
+
+                <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon> Close
+                    </div>
+                    </div>
+                </div>
                 {children}
             </div>
             </div>

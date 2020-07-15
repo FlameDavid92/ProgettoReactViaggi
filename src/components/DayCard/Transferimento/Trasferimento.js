@@ -24,7 +24,19 @@ export default function Trasferimento(){
                 <p  className='h4'>{transfer.name}</p>
                 <p>{transfer.description}..<Link to="" onClick={()=>utils.funzioneApriModale(setModTrasferimento,modTrasferimento)}>Scopri di più</Link></p>
                 <Modale click = {modTrasferimento}>
-                    {/*MODALE trasferimento???*/}
+                <div className="row">
+                    <div className="col-8 offset-2">
+                    <p className='h4'>{transfer.name}</p>
+                    <p className='text-capitalize'>{transfer.typology}</p>
+                    <FontAwesomeIcon  className={utils.arrayAssociativo[transfer.typology].classe}  icon={utils.arrayAssociativo[transfer.typology].icon} />
+                    
+
+                    <p>{transfer.description} </p>
+                    <p>{transfer.distance +' km'}</p>
+                    <p>Da: <span className='text-primary'>{transfer.departure.name}</span></p>
+                    <p>A: <span className='text-primary'> {transfer.arrival.name} </span></p>
+                    </div>
+                </div>
                 </Modale>
                 <p>Da <span className=' btn btn-outline-primary disabled br'>{transfer.departure.name}</span></p>
                 

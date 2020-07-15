@@ -11,11 +11,14 @@ body {
     margin-left: auto;
 }
 
+
 /* Variabili CSS */
+
 :root {
     --mycolor-separatore: #8898aa3a;
     --myheight-navbar: 35px;
 }
+
 
 /* COLORI */
 
@@ -23,9 +26,10 @@ body {
     color: #ffb400;
 }
 
-.mycolor-red{
-    color: rgb(207,10,16);
+.mycolor-red {
+    color: rgb(207, 10, 16);
 }
+
 
 /*da elim */
 
@@ -41,6 +45,7 @@ body {
     color: #8898AA;
 }
 
+
 /* TITOLI E TESTI */
 
 .bigTitle {
@@ -49,9 +54,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    /* se lo schermo è meno grande di 768px allora --> */
     .bigTitle {
         font-size: 36px;
-        font-family: 'Roboto';
     }
 }
 
@@ -60,10 +65,12 @@ body {
     font-family: 'Roboto';
 }
 
+
+/* c */
+
 @media screen and (max-width: 768px) {
     .mediumTitle {
         font-size: 28px;
-        font-family: 'Roboto';
     }
 }
 
@@ -114,6 +121,7 @@ body {
     border-radius: 10px;
 }
 
+
 /* IMMAGINI E ICONE*/
 
 .tiny-img {
@@ -128,17 +136,18 @@ body {
     height: auto;
 }
 
-.big-logo{
+.big-logo {
     width: 350px;
     height: auto;
 }
+
 @media screen and (max-width: 768px) {
     .big-logo {
         width: 250px;
     }
 }
 
-.logo{
+.logo {
     width: 150px;
     height: auto;
 }
@@ -148,6 +157,7 @@ body {
         width: 100px;
     }
 }
+
 
 /*DA RIVEDERE...*/
 

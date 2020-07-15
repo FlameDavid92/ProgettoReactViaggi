@@ -26,23 +26,28 @@ bg icon pink
 #fcd1da
 
  */
- .icon{
+
+.icon {
     height: 6em!important;
     width: 100px!important;
     padding: 10px;
- }
- .icon-taxi{
-    background-color:#fded98;
-    color: #ee9d08
- }
-.icon-bus{
-    background-color:#b0dbee;
-    color:#31befa
 }
-.icon-car{
-    background-color:#fcd1da;
+
+.icon-taxi {
+    background-color: #fded98;
+    color: #ee9d08
+}
+
+.icon-bus {
+    background-color: #b0dbee;
+    color: #31befa
+}
+
+.icon-car {
+    background-color: #fcd1da;
     color: #f73761
 }
+
 .btn {
     border-radius: 20px;
 }

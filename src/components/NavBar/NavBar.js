@@ -16,7 +16,7 @@ export default function NavBar({ navlinks,currentHover }) {
                         return (
                             <li key={i} className="nav-item">
                                 <NavLink className="nav-link" key={i + 1} 
-                                to={"/#" + link.id}><span className={"tiny-text link-hover "+((currentHover == link.id)?'my-active':'')}>{link.nome}</span></NavLink>
+                                to={"/#" + link.id}><span className={"tiny-text link-hover "+((currentHover == link.id)?'mycolor-red':'')}>{link.nome}</span></NavLink>
                             </li>
                         )
                     })}

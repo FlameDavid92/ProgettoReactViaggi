@@ -42,9 +42,17 @@ export default function App() {
 						{ id: 'referente', nome: 'REFERENTE' },
 						{ id: 'viaggio', nome: 'VIAGGIO' },
 						{ id: 'info', nome: 'INFO' }]}>
-					</NavBar>
+					</NavBar> 
+
 					<MyContext.Provider value={{ titolo: datiJson.title, nomeCliente: datiJson.customerName, image: datiJson.images[0].image }}>
-						<Header />
+					<VizSensor 
+							onChange={(isVisible)=>{
+								isVisible && setVisibility('')
+							}}>
+								
+							<div> <Header /> </div>
+							</VizSensor>
+						
 					</MyContext.Provider>
 
 					<div className="container-fluid">

@@ -36,6 +36,7 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
+
 					<NavBar currentHover={visibility} navlinks={
 						[{ id: 'mappa', nome: 'MAPPA' },
 						{ id: 'referente', nome: 'REFERENTE' },

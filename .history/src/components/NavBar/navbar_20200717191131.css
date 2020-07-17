@@ -8,8 +8,12 @@
 }
 
 .navlogo2{
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     background: url("./logo.png");
+    max-height: 75px;
+    max-width: 100px;
 }
 
 @media screen and (max-width: 768px) {

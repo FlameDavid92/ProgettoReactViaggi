@@ -8,14 +8,13 @@ export default function NavBar({ navlinks, currentHover }) {
         window.location.href = "/";
     }
     return (
-        <nav className="navbar sticky-top navbar-expand navbar-light my-nav">
+        <nav className="navbar sticky-top navbar-expand navbar-light my-nav text-sm flex-sm-row">
             <div className="collapse navbar-collapse">
-                <div className="container-fluid">
-                <div className="navbar-brand navlogo2"/>
+                <img className="navbar-brand logo m-0 p-0" src="./logo.png" alt="logo" />
                 <ul className="navbar-nav mr-auto">
                     {navlinks.map((link, i) => {
                         return (
-                            <li key={i} className="nav-item">
+                            <li key={i} className="nav-item flex-sm-fill text-sm-center">
                                 <NavLink className="nav-link" key={i + 1}
                                     to={"/#" + link.id}><span className={"tiny-text link-hover " + ((currentHover == link.id) ? 'mycolor-red' : '')}>{link.nome}</span></NavLink>
                             </li>
@@ -23,7 +22,6 @@ export default function NavBar({ navlinks, currentHover }) {
                     })}
                 </ul>
                 <button onClick={logout} className="btn btn-sm btn-outline-danger my-2">Logout</button>
-                </div>
             </div>
         </nav>
     )

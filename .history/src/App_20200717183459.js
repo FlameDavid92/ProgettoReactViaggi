@@ -36,6 +36,7 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
+
 					<NavBar currentHover={visibility} navlinks={
 						[{ id: 'mappa', nome: 'MAPPA' },
 						{ id: 'referente', nome: 'REFERENTE' },
@@ -47,10 +48,14 @@ export default function App() {
 					<VizSensor 
 							onChange={(isVisible)=>{
 								isVisible && setVisibility('')
-							}}>
+							}}><div style={{width:1,height:1}}></div></VizSensor>
 								
 							<div> <Header /> </div>
-							</VizSensor>
+							<VizSensor 
+							onChange={(isVisible)=>{
+								isVisible && setVisibility('')
+							}}><div style={{width:1,height:1}}></div></VizSensor>
+							
 						
 					</MyContext.Provider>
 
@@ -58,32 +63,36 @@ export default function App() {
 
 						{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
+							<div className="anchor" id="mappa">
 							<VizSensor 
 							onChange={(isVisible)=>{
 								isVisible && setVisibility('mappa')
-							}}>
-								
-							<div className="anchor" id="mappa"><MyTravel></MyTravel></div>
-							</VizSensor>
-							
+							}}><div style={{width:1,height:1}}></div></VizSensor>	
+							<MyTravel></MyTravel></div>
+							<VizSensor 
+							onChange={(isVisible)=>{
+								isVisible && setVisibility('mappa')
+							}}><div style={{width:1,height:1}}></div></VizSensor>
 						</MyContext.Provider>
 						<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
+							<div className="anchor" id="referente">
 							<VizSensor
 								onChange={(isVisible) => {
 									isVisible && setVisibility('referente')
 
 								}}
-							><div className="anchor" id="referente"><Referente></Referente></div></VizSensor>
+							><div style={{width:1,height:1}}></div></VizSensor>
+							<Referente></Referente></div>
 
 
 						</MyContext.Provider>
+						<div className="anchor" id="viaggio">
 						<VizSensor
 							onChange={(isVisible) => {
 								isVisible && setVisibility('viaggio')
 
 							}}
-						><div className="anchor" id="viaggio">
-
+						><div style={{width:1,height:1}}></div></VizSensor>
 
 								<div className="row">
 									<div className="col col-12">
@@ -119,16 +128,16 @@ export default function App() {
 										})}
 									</div>
 								</div>
-							</div></VizSensor>
+							</div>
 						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
+						<div className="anchor" id="info">
 						<VizSensor
 							onChange={(isVisible) => {
 								isVisible && setVisibility('info')
 
-							}}
-						><div className="anchor" id="info">
+							}}><div style={{width:1,height:1}}></div></VizSensor>
 								<div className="row mr-0 ml-0" id="info">
 									<MyContext.Provider value={{ nome: "TARIFFE" }}>
 										<Accordion tipo="info">
@@ -162,7 +171,7 @@ export default function App() {
 										</Accordion>
 									</MyContext.Provider>
 								</div>
-							</div></VizSensor>
+							</div>
 
 
 

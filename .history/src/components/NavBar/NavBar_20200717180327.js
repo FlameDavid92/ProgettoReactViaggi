@@ -8,10 +8,9 @@ export default function NavBar({ navlinks, currentHover }) {
         window.location.href = "/";
     }
     return (
-        <nav className="navbar sticky-top navbar-expand navbar-light my-nav">
-            <div className="collapse navbar-collapse">
-                <div className="container-fluid">
-                <div className="navbar-brand navlogo2"/>
+        <nav className="navbar sticky-top navbar-expand-lg collapse navbar-collapse navbar-light my-nav">
+            <div>
+                <img className="navbar-brand logo m-0 p-0" src="./logo.png" alt="logo" />
                 <ul className="navbar-nav mr-auto">
                     {navlinks.map((link, i) => {
                         return (
@@ -23,7 +22,6 @@ export default function NavBar({ navlinks, currentHover }) {
                     })}
                 </ul>
                 <button onClick={logout} className="btn btn-sm btn-outline-danger my-2">Logout</button>
-                </div>
             </div>
         </nav>
     )

@@ -1,0 +1,12 @@
+.my-nav {
+    background-color:  rgba(248, 249, 250, 0.8);
+    height: var(--myheight-navbar);
+}
+
+.link-hover:hover{
+    color: rgb(151, 10, 14);
+}
+
+.logout{
+    margin-right: 12px;
+}

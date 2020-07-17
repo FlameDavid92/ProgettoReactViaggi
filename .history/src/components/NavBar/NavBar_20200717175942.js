@@ -8,10 +8,12 @@ export default function NavBar({ navlinks, currentHover }) {
         window.location.href = "/";
     }
     return (
-        <nav className="navbar sticky-top navbar-expand navbar-light my-nav">
+        <nav className="navbar sticky-top navbar-expand-lg navbar-light my-nav">
+            <img className="navbar-brand logo m-0 p-0" src="./logo.png" alt="logo" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div className="collapse navbar-collapse">
-                <div className="container-fluid">
-                <div className="navbar-brand navlogo2"/>
                 <ul className="navbar-nav mr-auto">
                     {navlinks.map((link, i) => {
                         return (
@@ -23,7 +25,6 @@ export default function NavBar({ navlinks, currentHover }) {
                     })}
                 </ul>
                 <button onClick={logout} className="btn btn-sm btn-outline-danger my-2">Logout</button>
-                </div>
             </div>
         </nav>
     )

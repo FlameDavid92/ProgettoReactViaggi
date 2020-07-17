@@ -28,7 +28,7 @@ export default function Referente() {
                                 </span>
                                 <br />
                                 <span className="tinyText">
-                                    Email: <a href={`mailto: ${contesto.operator.contact.email}`} target="_blank" rel="noopener">{contesto.operator.contact.email}</a>
+                                    Email: {contesto.operator.contact.email}
                                 </span>
                             </p>
                         </div>

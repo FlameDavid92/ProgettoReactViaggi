@@ -10,6 +10,7 @@
 .navlogo2{
     background-repeat: no-repeat;
     background: url("./logo.png");
+    height: 20px;
 }
 
 @media screen and (max-width: 768px) {

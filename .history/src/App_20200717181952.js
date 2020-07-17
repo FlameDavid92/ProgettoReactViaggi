@@ -36,6 +36,7 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
+
 					<NavBar currentHover={visibility} navlinks={
 						[{ id: 'mappa', nome: 'MAPPA' },
 						{ id: 'referente', nome: 'REFERENTE' },
@@ -127,8 +128,8 @@ export default function App() {
 							onChange={(isVisible) => {
 								isVisible && setVisibility('info')
 
-							}}
-						><div className="anchor" id="info">
+							}}><div style={{width:300,height:500,zIndex: -1}}></div></VizSensor>
+						<div className="anchor" id="info">
 								<div className="row mr-0 ml-0" id="info">
 									<MyContext.Provider value={{ nome: "TARIFFE" }}>
 										<Accordion tipo="info">
@@ -162,7 +163,7 @@ export default function App() {
 										</Accordion>
 									</MyContext.Provider>
 								</div>
-							</div></VizSensor>
+							</div>
 
 
 

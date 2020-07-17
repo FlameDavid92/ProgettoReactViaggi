@@ -7,13 +7,13 @@
     color: rgb(151, 10, 14);
 }
 
-.navlogo2{
-    background-repeat: no-repeat;
-    background: url("./logo.png");
+.navlogo{
+    
+    background-image: './logo.png';
 }
 
 @media screen and (max-width: 768px) {
-    .navlogo2{
-        background-image: url('./minilogo.png');
+    .navlogo{
+        background-image: './minilogo.png';
     }
 }

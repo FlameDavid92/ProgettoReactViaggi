@@ -55,73 +55,74 @@ export default function App() {
 					</MyContext.Provider>
 
 					<div className="container-fluid">
-{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
+
+						{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
-							<div className="anchor" id="mappa"></div>
 							<VizSensor
 								onChange={(isVisible) => {
 									isVisible && setVisibility('mappa')
 								}}>
-								<MyTravel></MyTravel>
+
+								<div className="anchor" id="mappa"><MyTravel></MyTravel></div>
 							</VizSensor>
+
 						</MyContext.Provider>
 						<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
-							<div className="anchor" id="referente"></div>
 							<VizSensor
 								onChange={(isVisible) => {
 									isVisible && setVisibility('referente')
 
 								}}
-							><Referente></Referente></VizSensor>
+							><div className="anchor" id="referente"><Referente></Referente></div></VizSensor>
 
 
 						</MyContext.Provider>
-
-						<div className="anchor" id="viaggio"></div>
 						<VizSensor
 							onChange={(isVisible) => {
 								isVisible && setVisibility('viaggio')
 
 							}}
-						>
-							<div className="row">
-								<div className="col col-12">
+						><div className="anchor" id="viaggio">
 
-									{arrayCitta.map((citta, counter) => {
 
-										return (
-											<div key={counter + "div"}>
-												<MyContext.Provider value={citta}>
-													<Accordion key={citta.id} tipo="citta">
-														{citta.giorni.map((giorno, i) => {
-															return (
-																<div key={i + "div"}>
-																	<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
-																		<div className="row">
+								<div className="row">
+									<div className="col col-12">
 
-																			<div className="col-1">
-																				<Dayline giorno={x++} attivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
+										{arrayCitta.map((citta, counter) => {
+
+											return (
+												<div key={counter + "div"}>
+													<MyContext.Provider value={citta}>
+														<Accordion key={citta.id} tipo="citta">
+															{citta.giorni.map((giorno, i) => {
+																return (
+																	<div key={i + "div"}>
+																		<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
+																			<div className="row">
+
+																				<div className="col-1">
+																					<Dayline giorno={x++} attivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
+																				</div>
+																				<div className="col-11">
+																					<DayCard boleano={i < 1} key={giorno.id} />
+																				</div>
 																			</div>
-																			<div className="col-11">
-																				<DayCard boleano={i < 1} key={giorno.id} />
-																			</div>
-																		</div>
-																	</MyContext.Provider>
-																</div>
-															)
-														})}
-													</Accordion>
-												</MyContext.Provider>
-											</div>
-										)
+																		</MyContext.Provider>
+																	</div>
+																)
+															})}
+														</Accordion>
+													</MyContext.Provider>
+												</div>
+											)
 
-									})}
+										})}
+									</div>
 								</div>
-							</div>
-						</VizSensor>
-{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
+							</div></VizSensor>
+						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
-{/****************************************INIZIO ACCORDION INFO******************************************/}
+						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
 							onChange={(isVisible) => {

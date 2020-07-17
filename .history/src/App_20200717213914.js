@@ -55,7 +55,8 @@ export default function App() {
 					</MyContext.Provider>
 
 					<div className="container-fluid">
-{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
+
+						{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
 							<div className="anchor" id="mappa"></div>
 							<VizSensor
@@ -119,9 +120,9 @@ export default function App() {
 								</div>
 							</div>
 						</VizSensor>
-{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
+						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
-{/****************************************INIZIO ACCORDION INFO******************************************/}
+						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
 							onChange={(isVisible) => {

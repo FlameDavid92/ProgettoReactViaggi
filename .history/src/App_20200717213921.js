@@ -119,9 +119,9 @@ export default function App() {
 								</div>
 							</div>
 						</VizSensor>
-{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
+						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
-{/****************************************INIZIO ACCORDION INFO******************************************/}
+						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
 							onChange={(isVisible) => {

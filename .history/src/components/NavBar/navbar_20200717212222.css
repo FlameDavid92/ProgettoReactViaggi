@@ -9,8 +9,8 @@
 
 .navlogo{
     content:url("./logo.png");
-    height: calc(var(--myheight-navbar) - 4px);
-    width: auto;
+    width:50px;
+    height: auto;
 }
 
 @media screen and (max-width: 768px) {

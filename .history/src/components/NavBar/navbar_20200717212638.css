@@ -9,7 +9,7 @@
 
 .navlogo{
     content:url("./logo.png");
-    height: calc(var(--myheight-navbar) - 4px);
+    height: 30px;
     width: auto;
 }
 

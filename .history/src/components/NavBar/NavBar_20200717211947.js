@@ -11,7 +11,7 @@ export default function NavBar({ navlinks, currentHover }) {
         <nav className="navbar sticky-top navbar-expand navbar-light my-nav">
             <div className="collapse navbar-collapse">
                 <div className="container-fluid">
-                <img className="m-0 p-0 navlogo" alt="logo" />
+                <img className="navbar-brand logo m-0 p-0" src="./logo.png" alt="logo" />
                 <ul className="navbar-nav mr-auto">
                     {navlinks.map((link, i) => {
                         return (

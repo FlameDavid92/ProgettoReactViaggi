@@ -72,9 +72,9 @@ export function mapCitta(righe) { // ci creiamo il json
 }
 
 /*******************GESTIONE VISUALIZZAZIONE DATE E NUM ADULTI/BAMBINI*****************************/
-export function getDateDalAl(dateFrom,dateTo){
-    const nomiMesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
+const nomiMesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
     "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+export function getDateDalAl(dateFrom,dateTo){
     let dataPartenza = new Date(dateFrom);
     let dataArrivo = new Date(dateTo);
     let annoPartenza = (dataPartenza.getFullYear() !== dataArrivo.getFullYear()) ? " "+dataPartenza.getFullYear() : "";
@@ -83,8 +83,6 @@ export function getDateDalAl(dateFrom,dateTo){
 }
 
 export function getDateDalAlNoYear(dateFrom,dateTo){
-    const nomiMesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
-    "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
     let dataPartenza = new Date(dateFrom);
     let dataArrivo = new Date(dateTo);
     let mesePartenza = (dataPartenza.getMonth() !== dataArrivo.getMonth()) ? " "+nomiMesi[dataPartenza.getMonth()] : "";
@@ -92,10 +90,8 @@ export function getDateDalAlNoYear(dateFrom,dateTo){
 }
 
 export function getDayMonth(date){
-    const nomiMesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
-    "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
     let retDate = new Date(date);
-    return `${retDate.getDate()} ${nomiMesi[retDate.getMonth()]}`;
+    return `${retDate.getDate()}${nomiMesi[retDate.getMonth()]}`;
 }
 
 export function calcolaNumAdultiBambini(partecipanti){

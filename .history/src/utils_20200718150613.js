@@ -95,7 +95,7 @@ export function getDayMonth(date){
     const nomiMesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
     "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
     let retDate = new Date(date);
-    return `${retDate.getDate()} ${nomiMesi[retDate.getMonth()]}`;
+    return `${retDate.getDate()}${nomiMesi[retDate.getMonth()]}`;
 }
 
 export function calcolaNumAdultiBambini(partecipanti){

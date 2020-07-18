@@ -26,10 +26,21 @@ body {
 
 /* COLORI */
 
-.primary-color{ color: rgb(245, 174, 21); }
-.secondary-color{ color: rgb(129, 129, 129)}
-.tertiary-color {color: rgb(2, 102, 216);}
-.quaternary-color {color: rgb(207, 10, 16);}
+.primary-color {
+    color: rgb(245, 174, 21);
+}
+
+.secondary-color {
+    color: rgb(129, 129, 129)
+}
+
+.tertiary-color {
+    color: rgb(2, 102, 216);
+}
+
+.quaternary-color {
+    color: rgb(207, 10, 16);
+}
 
 .mycolor-orange {
     color: rgb(245, 174, 21);
@@ -48,7 +59,7 @@ body {
 }
 
 .color-text-grey {
-    color: rgb(129, 129, 129);
+    color: rgb(68, 67, 67);
 }
 
 
@@ -64,11 +75,17 @@ body {
     font-family: 'Roboto';
 }
 
+
 /* c */
 
 .title {
     font-size: 24px;
     font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: 14px;
 }
 
 .subTitle {
@@ -152,7 +169,7 @@ body {
     .logo {
         width: 100px;
     }
-    .tiny-img{
+    .tiny-img {
         width: 100px;
         height: 100px;
     }
@@ -160,6 +177,10 @@ body {
 
 
 /*DA RIVEDERE...*/
+
+.transfer-button {
+    border-radius: 20px;
+}
 
 .date-text {
     font-size: 24px;
@@ -179,7 +200,31 @@ div.anchor {
     top: calc(-1 * var(--myheight-navbar));
 }
 
-div.pixel{
+div.pixel {
     width: 1px;
     height: 1px;
 }
+
+.taglia-testo {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.taglia-testo-pernottamento {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+
+/* 
+
+display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+*/

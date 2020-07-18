@@ -22,12 +22,12 @@ export default function Trasferimento(){
                 </div>
                 <div className='col-10'>
                 <p  className='h4'>{transfer.name}</p>
-                <p>{transfer.description}..<Link to="" onClick={()=>utils.funzioneApriModale(setModTrasferimento,modTrasferimento)}>Scopri di più</Link></p>
+                <p className='taglia-testo'>{transfer.description}...<Link to="" onClick={()=>utils.funzioneApriModale(setModTrasferimento,modTrasferimento)}>Scopri di più</Link></p>
                 <Modale click = {modTrasferimento}>
                 <div className="row">
                     <div className="col-8 offset-2">
                     <p className='h4'>{transfer.name}</p>
-                    <p className='text-capitalize'>{transfer.typology}</p>
+                    <p className='text-capitalize'>{transfer.typology.replace('_',' ')}</p>
                     <FontAwesomeIcon  className={utils.arrayAssociativo[transfer.typology].classe}  icon={utils.arrayAssociativo[transfer.typology].icon} />
                     
 
@@ -38,9 +38,8 @@ export default function Trasferimento(){
                     </div>
                 </div>
                 </Modale>
-                <p>Da <span className=' btn btn-outline-primary disabled br'>{transfer.departure.name}</span></p>
-                
-                <p>a <span className=' btn btn-outline-primary disabled'>{transfer.arrival.name}</span></p>
+                <p>DA <span className=' btn btn-outline-primary disabled transfer-button '>{transfer.departure.name}</span></p>
+                <p>A <span className='btn btn-outline-primary disabled transfer-button  '>{transfer.arrival.name}</span></p>
                 
                 </div>
                 </div>

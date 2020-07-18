@@ -28,8 +28,8 @@ bg icon pink
  */
 
 .icon {
-    height: 6em!important;
-    width: 100px!important;
+    height: 120px!important;
+    width: 120px!important;
     padding: 10px;
 }
 
@@ -46,8 +46,4 @@ bg icon pink
 .icon-car {
     background-color: #fcd1da;
     color: #f73761
-}
-
-.btn {
-    border-radius: 20px;
 }

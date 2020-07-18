@@ -21,13 +21,27 @@ export default function Attivita(){
             <div className="col-10">
                 <div className="row">
                     <div className="col-12">
-                       <p className='h4'>{act.name} </p> 
+                       <p className='title'>{act.name} </p> 
                     </div>
                     <div className="col-12">
-                       <p>{act.description}..<Link to="" onClick={()=>utils.funzioneApriModale(setModAttivita,modAttivita)}>Scopri di più</Link></p> 
+                       <p><span className='taglia-testo color-text-grey text-small'> {act.description}...</span>                       <Link to="" onClick={()=>utils.funzioneApriModale(setModAttivita,modAttivita)}>Scopri di più</Link></p>
+                       
                        <Modale click = {modAttivita}>
-                            <img alt="immagine" src={act.images[0].image}></img>
-                            <p>{act.description}</p>
+                       <div className="row">
+                           {act.images.map((ele,i)=>{
+                               return( <div className="col-4 ">
+                                    <img className="img-modale-attivita p-3 " key={i} alt='imgxD' src ={ele.image}></img>
+                               </div>
+                                   )
+                           })}
+                       </div>
+                          {/*  <img alt="immagine" src={act.images[0].image}></img> */}
+                          <div className="row">
+                              <div className="col-12">
+
+                            <p className='text-center  m-2 color-text-grey text-small '>{act.description}</p>
+                              </div>
+                          </div>
                        </Modale>
                     </div>
                 </div>

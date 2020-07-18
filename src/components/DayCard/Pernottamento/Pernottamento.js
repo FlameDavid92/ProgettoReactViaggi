@@ -28,7 +28,7 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                         <div className='col-5'>
                             <p>{acc.name} {(acc.stars.includes('Luxury') ? acc.stars : acc.stars + '*')}</p>
                             <button className='btn btn-outline-primary disabled'>{acc.places[0].name}</button>
-                            <p>{acc.description}..<Link to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link></p>
+                            <p className='taglia-testo-pernottamento' >{acc.description}...<Link to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link></p>
                             <Modale click={modPernottamento}>
                                 <div className="row">
                                     <div className="col-8 offset-2"> 

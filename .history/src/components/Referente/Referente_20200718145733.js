@@ -17,7 +17,7 @@ export default function Referente() {
                                 src={contesto.operator.image}
                             ></img>
                         </div>
-                        <div className="col-7 col-xl-7">
+                        <div className="col-7 col-xl-6">
                             <div className="row h-100">
                                 <div className="col-12">
                                     <span className="tinyText">

@@ -17,40 +17,40 @@ export default function Referente() {
                                 src={contesto.operator.image}
                             ></img>
                         </div>
-                        <div className="col-7 col-xl-7">
-                            <div className="row h-100">
+                        <div className="col-7 col-xl-6">
+                            <div className="row justify-content-between">
                                 <div className="col-12">
-                                    <span className="tinyText">
+                                    <p className="tinyText">
                                         Il tuo referente è{" "}
-                                        <span className="mycolor-orange">{contesto.operator.name}</span></span>
+                                        <span className="mycolor-orange">{contesto.operator.name}</span></p>
                                 </div>
-                                <div className="col-12 mt-auto">
-                                    <span className="tinyText">
+                                <div className="col-12">
+                                    <p><span className="tinyText">
                                         Tel: <a href={`tel: ${contesto.operator.contact.phone}`} >{contesto.operator.contact.phone}</a>
                                     </span>
                                         <br />
                                         <span className="tinyText">
                                             Email: <a href={`mailto: ${contesto.operator.contact.email}`} target="_blank" rel="noopener">{contesto.operator.contact.email}</a>
-                                        </span>
+                                        </span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-12 col-xl-1 separatore-card"></div>
-                <div className="col-12 col-xl-5 offset-xl-1 agency-info">
-                    <div className="row h-100">
+                <div className="col-12 col-xl-6">
+                    <div className="row align-items-center justify-content-center">
                         <div className="col-12">
                             <img alt="immagine" className="tiny-icon" src={iconaAzienda}></img>
                         </div>
-                        <div className="col-12 mt-auto">
-                            <span className="tinyText">
+                        <div className="col-12">
+                            <p className="tinyText">
                                 {contesto.agency.name}
                                 <br />
                                 {contesto.agency.contact.address}
                                 <br />
                                 {contesto.agency.contact.website}
-                            </span>
+                            </p>
                         </div>
                     </div>
                 </div>

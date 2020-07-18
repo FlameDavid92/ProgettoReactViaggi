@@ -17,10 +17,6 @@ body {
 :root {
     --mycolor-separatore: #8898aa3a;
     --myheight-navbar: 35px;
-    --icon-height: 150px;
-    --icon-width: 150px;
-    --mini-icon-height: 100px;
-    --mini-icon-width: 100px;
 }
 
 
@@ -86,7 +82,7 @@ body {
 }
 
 .tinyText {
-    font-size: 1rem;
+    font-size: 15px;
     font-family: 'Roboto';
 }
 
@@ -98,8 +94,8 @@ body {
 /* IMMAGINI E ICONE*/
 
 .tiny-img {
-    width: var(--icon-width);
-    height: var(--icon-height);
+    width: 150px;
+    height: 150px;
     display: block;
     object-fit: cover;
 }
@@ -143,18 +139,11 @@ body {
         font-size: 22px;
         font-family: 'Roboto';
     }
-    .tinyText {
-        font-size: 0.8rem;
-    }
     .big-logo {
         width: 250px;
     }
     .logo {
         width: 100px;
-    }
-    .tiny-img{
-        width: 100px;
-        height: 100px;
     }
 }
 

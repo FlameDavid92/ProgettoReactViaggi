@@ -1,0 +1,22 @@
+.reference-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.separatore-card {
+    border-right: 1px solid var(--mycolor-separatore);
+    margin-right: 1rem;
+    height: 22vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .separatore-card {
+        border-bottom: 1px solid var(--mycolor-separatore);;
+        border-right: 0;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        height: 1px;
+    }
+}

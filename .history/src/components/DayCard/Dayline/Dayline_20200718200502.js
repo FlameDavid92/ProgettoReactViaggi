@@ -11,7 +11,7 @@ export default function Dayline({ giorno, attivita, transports, end }) {
             <div className="row h-100 justify-content-center">
                 <div className="col-12 text-center">
                     <div className="row flex-column align-items-center text-center">
-                        <div className="col-4 p-0">
+                        <div className="col-3 p-0">
                             <div className="day-circle text-white tinyText">DAY <span className="largeText">{giorno}</span></div>
                         </div>
 

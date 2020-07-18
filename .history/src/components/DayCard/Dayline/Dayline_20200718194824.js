@@ -8,20 +8,18 @@ import './dayline.css'
 export default function Dayline({ giorno, attivita, transports, end }) {
     return (
         <>
-            <div className="row h-100 justify-content-center">
-                <div className="col-12 text-center">
-                    <div className="row flex-column align-items-center text-center">
-                        <div className="col-4 p-0">
+            <div className="row h-100">
+                <div className="col-12">
+                    <div className="row">
+                        <div className='col-12'>
                             <div className="day-circle text-white tinyText">DAY <span className="largeText">{giorno}</span></div>
                         </div>
-
-
                         {Array(attivita).fill(null).map(att => {
-                            return <div className='col-2 text-center p-0'>
+                            return <div className='col-12r'>
                                 <div className="activity-circle"><FontAwesomeIcon icon={faMapMarker} /></div></div>
                         })}
                         {transports.map(tr => {
-                            return <div className='col-2 text-center p-0'>
+                            return <div className='col-12'>
                                 <div className="div-transport">
                                     <FontAwesomeIcon className={arrayAssociativo[tr.typology].classe + " transport-circle"} icon={arrayAssociativo[tr.typology].icon} />
                                 </div>
@@ -29,7 +27,7 @@ export default function Dayline({ giorno, attivita, transports, end }) {
                         })}
                     </div>
                 </div>
-                {(!end) && (<div className='col-1 h-100 p-0 pl-1'><div className="coda-timeline" /></div>)}
+                {(!end) && (<div className='col-1 h-100 p-0 pl-1'><div className="coda-timeline"/></div>)}
             </div>
         </>
     )

@@ -1,0 +1,8 @@
+.citta-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.citta-row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}

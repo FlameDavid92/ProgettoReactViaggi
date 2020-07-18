@@ -24,8 +24,8 @@ export default function Accordion({ tipo, children }) {
 
                 <div className={'separatore'+((opened) ? ' d-block' : ' d-none')}> </div>
                 <div className="row">
-                    <div className={`col-12 body-accordion m-auto ${opened ? 'open' : 'close'}  `}>
-                        {(opened ? (<div className="body-props mt-3">{children}</div>) : '')}
+                    <div className={`col-12 body-accordion mt-3 ${opened ? 'open' : 'close'}  `}>
+                        {(opened ? (<div className="body-props">{children}</div>) : '')}
                     </div>
                 </div>
             </div>

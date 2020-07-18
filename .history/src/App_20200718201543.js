@@ -83,7 +83,7 @@ export default function App() {
 							}}
 						><div className="pixel"></div></VizSensor>
 						<div className="row">
-							<div className="col-12">
+							<div className="col col-12">
 
 								{arrayCitta.map((citta, counter) => {
 

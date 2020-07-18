@@ -31,7 +31,6 @@
     border-radius: 50%;
     width: 40px !important;
     height: 40px !important;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -42,8 +41,8 @@
         width: 4px;
     }
     .day-circle {
-        width: 40px !important;
-        height: 40px !important;
+        width: 30px !important;
+        height: 30px !important;
     }
     .activity-circle {
         width: 20px !important;
@@ -52,6 +51,5 @@
     .transport-circle {
         width: 20px !important;
         height: 20px !important;
-        padding: 2px !important;
     }
 }

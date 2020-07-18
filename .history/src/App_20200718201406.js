@@ -83,7 +83,7 @@ export default function App() {
 							}}
 						><div className="pixel"></div></VizSensor>
 						<div className="row">
-							<div className="col-12">
+							<div className="col col-12">
 
 								{arrayCitta.map((citta, counter) => {
 
@@ -95,7 +95,7 @@ export default function App() {
 														return (
 															<div key={i + "div"}>
 																<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
-																	<div className="row">
+																	<div className="row mt-5">
 																		<div className="col-1">
 																			<Dayline giorno={x++} attivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
 																		</div>

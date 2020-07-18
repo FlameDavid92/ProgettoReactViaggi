@@ -44,7 +44,7 @@ body {
 }
 
 .color-text-grey {
-    color: rgb(129, 129, 129);
+    color: #8898AA;
 }
 
 
@@ -152,7 +152,7 @@ body {
 
 .date-text {
     font-size: 24px;
-    color: rgb(129, 129, 129);
+    color: #8898AA;
     font-weight: 300;
 }
 

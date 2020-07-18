@@ -25,26 +25,28 @@ body {
 .primary-color{ color: rgb(245, 174, 21); }
 .secondary-color{ color: rgb(129, 129, 129)}
 .tertiary-color {color: rgb(2, 102, 216);}
-.quaternary-color {color: rgb(207, 10, 16);}
 
 .mycolor-orange {
-    color: rgb(245, 174, 21);
+    color: #ffb400;
 }
 
 .mycolor-red {
     color: rgb(207, 10, 16);
 }
 
+
+/*da elim */
+
 .color-orange {
-    color: rgb(245, 174, 21);
+    color: #ffb400;
 }
 
 .mycolor-grey {
-    color: rgb(129, 129, 129);
+    color: #8898AA;
 }
 
 .color-text-grey {
-    color: rgb(129, 129, 129);
+    color: #8898AA;
 }
 
 
@@ -152,7 +154,7 @@ body {
 
 .date-text {
     font-size: 24px;
-    color: rgb(129, 129, 129);
+    color: #8898AA;
     font-weight: 300;
 }
 

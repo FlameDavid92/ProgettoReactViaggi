@@ -120,7 +120,7 @@ export default function App() {
 
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
-						<VizSensor
+						<VizSensor partialVisibility='top' offset={{top:300}}
 							onChange={(isVisible) => {
 								isVisible && setVisibility('info')
 

@@ -50,6 +50,12 @@ export default function App() {
 							<div className="pixel"></div>
 						</VizSensor>
 						<Header />
+						<VizSensor
+							onChange={(isVisible) => {
+								isVisible && setVisibility('')
+							}}>
+							<div className="pixel"></div>
+						</VizSensor>
 					</MyContext.Provider>
 
 					<div className="container-fluid">
@@ -63,6 +69,12 @@ export default function App() {
 								<div className="pixel"></div>
 							</VizSensor>
 							<MyTravel></MyTravel>
+							<VizSensor
+								onChange={(isVisible) => {
+									isVisible && setVisibility('mappa')
+								}}>
+								<div className="pixel"></div>
+							</VizSensor>
 						</MyContext.Provider>
 						<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 							<div className="anchor" id="referente"></div>
@@ -73,6 +85,12 @@ export default function App() {
 								}}
 							><div className="pixel"></div></VizSensor>
 							<Referente></Referente>
+							<VizSensor
+								onChange={(isVisible) => {
+									isVisible && setVisibility('referente')
+
+								}}
+							><div className="pixel"></div></VizSensor>
 						</MyContext.Provider>
 
 						<div className="anchor" id="viaggio"></div>
@@ -116,6 +134,12 @@ export default function App() {
 								})}
 							</div>
 						</div>
+						<VizSensor
+							onChange={(isVisible) => {
+								isVisible && setVisibility('viaggio')
+
+							}}
+						><div className="pixel"></div></VizSensor>
 						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
@@ -159,6 +183,13 @@ export default function App() {
 								</Accordion>
 							</MyContext.Provider>
 						</div>
+						<VizSensor
+							onChange={(isVisible) => {
+								isVisible && setVisibility('info')
+
+							}}
+						><div className="pixel"></div></VizSensor>
+
 						{/****************************************FINE ACCORDION INFO******************************************/}
 					</div> {/*chiusura div container-fluid*/}
 				</MyContext.Provider> {/*chiusura provider con value datiJson*/}

@@ -50,6 +50,12 @@ export default function App() {
 							<div className="pixel"></div>
 						</VizSensor>
 						<Header />
+						<VizSensor
+							onChange={(isVisible) => {
+								isVisible && setVisibility('')
+							}}>
+							<div className="pixel"></div>
+						</VizSensor>
 					</MyContext.Provider>
 
 					<div className="container-fluid">

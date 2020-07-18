@@ -1,4 +1,4 @@
-/* BODY E CONTAINER-FLUID MOD */
+/* BODY E CONTAINER-FLUID */
 
 body {
     background-color: #f5f6fb;
@@ -53,12 +53,26 @@ body {
     font-family: 'Roboto';
 }
 
+@media screen and (max-width: 768px) {
+    /* se lo schermo è meno grande di 768px allora --> */
+    .bigTitle {
+        font-size: 36px;
+    }
+}
+
 .mediumTitle {
     font-size: 36px;
     font-family: 'Roboto';
 }
 
+
 /* c */
+
+@media screen and (max-width: 768px) {
+    .mediumTitle {
+        font-size: 28px;
+    }
+}
 
 .title {
     font-size: 24px;
@@ -121,12 +135,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .bigTitle {
-        font-size: 36px;
-    }
-    .mediumTitle {
-        font-size: 28px;
-    }
     .title {
         font-size: 20px;
     }

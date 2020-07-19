@@ -50,5 +50,7 @@
     }
     .date-text {
         font-size: 14px;
+        color: rgb(129, 129, 129);
+        font-weight: 300;
     }
 }

@@ -5,7 +5,7 @@ export default function Note() {
         <div className="row">
             <div className="col-10 offset-1">
                 <ul>
-                    <li className="mediumText">Nessuna nota disponibile</li>
+                    <li className="mediumText">Nessuna Nota disponibile</li>
                 </ul>
             </div>
         </div>

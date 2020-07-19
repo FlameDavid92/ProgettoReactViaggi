@@ -3,47 +3,44 @@ import './tariffa.css';
 
 export default function Tariffa({ dati }) {
     return (
-        <div className="row">
-            <div className="col-10 offset-1">
-                <div className="container-content">
-                    <div className="accordion__body">
-                        <div className="accordion__price black">
-                            <div className="single__price">
-                                <p className="mb-0">Prezzo a persona</p>
-                                <p className="primary-color">{((dati.partecipants[0].price)).toFixed(2) + ' €'}</p>
-                            </div>
-                            <hr />
-                            {
-                                dati.partecipants.map((ele, i) => {
-                                    return <div key={i} className='d-flex my-2'><span>{'Persona ' + (i + 1)}</span><span className="ml-auto secondary-color">{(ele.price).toFixed(2) + '€'}</span></div>
-                                })
-                            }
-                            <hr />
-                            <div className="total__price text-right">
-                                <p className="mb-0">Totale</p>
-                                <p className="primary-color">{((dati.priceTotal) / 100).toFixed(2) + '€'}</p>
-                            </div>
-                            <div className="price__included secondary-color">
-                                <p className="primary-color">Cosa Comprende il prezzo</p>
-                                <p>{dati.included}</p>
-                                <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum dolor adipisicing elit:</p>
-                                <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
-                                <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
-                                <p>Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
-                            </div>
-                            <div className="price__included secondary-color">
-                                <p className="primary-color">Cosa Non Comprende il prezzo</p>
-                                <p>{dati.notIncluded}</p>
-                                <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum dolor adipisicing elit:</p>
-                                <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
-                                <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
-                                <p>Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
-                            </div>
-                        </div>
+        <div class="container-content">
+            <div class="accordion__body mr-5">
+                <div class="accordion__price black">
+                    <div class="single__price">
+                        <p class="mb-0">Prezzo a persona</p>
+                        <p class="primary-color">1780,00 €</p>
                     </div>
+                    <hr>
+                        <div class="first__price d-flex">
+                            <span>Persona 1 </span><span class="ml-auto secondary-color">1780,00 €</span>
+                        </div>
+                        <div class="second__price d-flex my-2">
+                            <span>Persona 2 </span><span class="ml-auto secondary-color">1780,00 €</span>
+                        </div>
+                        <hr>
+                            <div class="total__price text-right">
+                                <p class="mb-0">Totale</p>
+                                <p class="primary-color">3560,00 €</p>
+                            </div>
+                            <div class="price__included secondary-color">
+                                <p class="primary-color">Cosa Comprende il prezzo</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum dolor adipisicing elit:</p>
+                                <p class="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
+                                <p class="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
+                                <p>Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
+                            </div>
+                            <div class="price__included secondary-color">
+                                <p class="primary-color">Cosa Non Comprende il prezzo</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum dolor adipisicing elit:</p>
+                                <p class="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
+                                <p class="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
+                                <p>Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
+                            </div>
                 </div>
             </div>
-        </div>
+                </div>
     )
 }
 

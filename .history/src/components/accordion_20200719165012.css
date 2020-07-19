@@ -9,12 +9,6 @@
     font-weight: bold;
 }
 
-.date-text {
-    font-size: 24px;
-    color: rgb(129, 129, 129);
-    font-weight: 300;
-}
-
 .icon-arrow {
     cursor: pointer;
 }
@@ -47,8 +41,5 @@
 @media screen and (max-width: 768px){
     .titoloAccordion {
         font-size: 20px;
-    }
-    .date-text {
-        font-size: 14px;
     }
 }

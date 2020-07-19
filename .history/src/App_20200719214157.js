@@ -18,7 +18,6 @@ import './App.css';
 const urlJSON = 'http://51.77.82.133:86/api/quotations/QUO_5e5e2952ae57f#'
 
 export default function App() {
-	utils.setCssVhVariable();
 	var x = 1
 	const [visibility, setVisibility] = useState('');
 	const [datiJson, setDatiJson] = useState(null);

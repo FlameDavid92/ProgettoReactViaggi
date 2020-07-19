@@ -35,13 +35,3 @@
     width: 350px;
     height: auto;
 }
-@media screen and (max-width: 768px) {
-    .login-logo{
-        width: 250px;
-    }
-}
-@media screen and (max-width: 415px) {
-    .login-logo{
-        width: 180px;
-    }
-}

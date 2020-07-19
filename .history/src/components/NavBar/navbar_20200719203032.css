@@ -17,23 +17,14 @@
     font-size: 1rem;
     font-family: 'Roboto';
 }
+
 @media screen and (max-width: 768px) {
     .navlogo{
         content:url("./minilogo.png");
     }
     .font-link {
-        font-size: 0.8rem;
-    }
-    .my-nav {
-        height: var(--myheight-navbar);
-    } 
-}
-@media screen and (max-width: 415px) {
-    .navlogo{
-        content:url("./minilogo.png");
-    }
-    .font-link {
         font-size: 0.6rem;
+        font-family: 'Roboto';
     }
     .my-nav {
         height: var(--myheight-navbar);

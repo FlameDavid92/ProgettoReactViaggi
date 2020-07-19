@@ -42,7 +42,10 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                     </div>
                 )
             })}
-            {!boleano && <div><p className='h3'>Ricordati che pernotti al {titoloAccomodation}</p></div>}
+            {!boleano && <div><p className='h3 color-reminder-pernottamento'>Ricordati che pernotti al <span className='text-pernottamento'>{titoloAccomodation}</span></p></div>}
         </>
     )
 }
+
+
+

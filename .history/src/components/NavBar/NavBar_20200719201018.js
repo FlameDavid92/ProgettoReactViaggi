@@ -17,12 +17,12 @@ export default function NavBar({ navlinks, currentHover }) {
                         return (
                             <li key={i} className="nav-item">
                                 <NavLink className="nav-link" key={i + 1}
-                                    to={"/#" + link.id}><span className={"font-link link-hover " + ((currentHover === link.id) ? 'mycolor-red' : '')}>{link.nome}</span></NavLink>
+                                    to={"/#" + link.id}><span className={"font-link link-hover " + ((currentHover == link.id) ? 'mycolor-red' : '')}>{link.nome}</span></NavLink>
                             </li>
                         )
                     })}
                 </ul>
-                <button onClick={logout} className="btn btn-sm btn-outline-danger logout-btn">Logout</button>
+                <button onClick={logout} className="btn btn-sm btn-outline-danger my-2">Logout</button>
                 </div>
             </div>
         </nav>

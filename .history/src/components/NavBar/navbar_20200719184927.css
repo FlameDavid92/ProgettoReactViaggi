@@ -17,29 +17,17 @@
     font-size: 1rem;
     font-family: 'Roboto';
 }
+
 @media screen and (max-width: 768px) {
     .navlogo{
         content:url("./minilogo.png");
     }
     .font-link {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        font-family: 'Roboto';
     }
     .my-nav {
-        height: var(--myheight-navbar);
-    } 
-}
-@media screen and (max-width: 415px) {
-    .navlogo{
-        content:url("./minilogo.png");
-    }
-    .font-link {
-        font-size: 0.6rem;
-    }
-    .my-nav {
-        height: var(--myheight-navbar);
+        background-color:  rgba(248, 249, 250, 0.8);
+        height: calc(var(--myheight-navbar) + 5px);
     }    
-    .logout-btn{
-        padding: 0.1rem !important;
-        font-size: 0.7rem !important;
-    }
 }

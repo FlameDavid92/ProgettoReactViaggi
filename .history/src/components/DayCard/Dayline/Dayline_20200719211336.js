@@ -5,7 +5,7 @@ import { arrayAssociativo } from '../../../utils';
 import './dayline.css'
 
 
-export default function Dayline({ giorno, numeroAttivita, transports, end }) {
+export default function Dayline({ giorno, attivita, transports, end }) {
     return (
         <>
             <div className="row h-100 justify-content-center">
@@ -16,7 +16,7 @@ export default function Dayline({ giorno, numeroAttivita, transports, end }) {
                         </div>
 
 
-                        {Array(numeroAttivita).fill(null).map(att => {
+                        {Array(attivita).fill(null).map(att => {
                             return <div className='col-2 text-center p-0'>
                                 <div className="activity-circle"><FontAwesomeIcon icon={faMapMarker} /></div></div>
                         })}

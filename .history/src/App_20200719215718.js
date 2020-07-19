@@ -65,7 +65,7 @@ export default function App() {
 							</VizSensor>
 							<MyTravel></MyTravel>
 						</MyContext.Provider>
-						<div className="mt-3">
+						<div className="mt-5">
 							<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 								<div className="anchor" id="referente"></div>
 								<VizSensor
@@ -100,7 +100,7 @@ export default function App() {
 																<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
 																	<div className="row">
 																		<div className="col-1">
-																			<Dayline giorno={x++} numeroAttivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
+																			<Dayline giorno={x++} attivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
 																		</div>
 																		<div className="col-10">
 																			<DayCard boleano={i < 1} key={giorno.id} />

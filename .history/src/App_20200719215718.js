@@ -65,7 +65,7 @@ export default function App() {
 							</VizSensor>
 							<MyTravel></MyTravel>
 						</MyContext.Provider>
-						<div className="mt-3">
+						<div className="mt-5">
 							<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 								<div className="anchor" id="referente"></div>
 								<VizSensor

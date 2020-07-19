@@ -53,7 +53,7 @@ export default function App() {
 						<Header />
 					</MyContext.Provider>
 
-					<div className="container-fluid my-5">
+					<div className="container-fluid mt-5">
 						{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
 							<div className="anchor" id="mappa"></div>
@@ -65,18 +65,16 @@ export default function App() {
 							</VizSensor>
 							<MyTravel></MyTravel>
 						</MyContext.Provider>
-						<div className="mt-3">
-							<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
-								<div className="anchor" id="referente"></div>
-								<VizSensor
-									onChange={(isVisible) => {
-										isVisible && setVisibility('referente')
+						<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
+							<div className="anchor" id="referente"></div>
+							<VizSensor
+								onChange={(isVisible) => {
+									isVisible && setVisibility('referente')
 
-									}}
-								><div className="pixel"></div></VizSensor>
-								<Referente></Referente>
-							</MyContext.Provider>
-						</div>
+								}}
+							><div className="pixel"></div></VizSensor>
+							<Referente></Referente>
+						</MyContext.Provider>
 
 						<div className="anchor" id="viaggio"></div>
 						<VizSensor
@@ -105,7 +103,7 @@ export default function App() {
 																		<div className="col-10">
 																			<DayCard boleano={i < 1} key={giorno.id} />
 																		</div>
-																		<div className="col-1" />
+																		<div className="col-1"/>
 																	</div>
 																</MyContext.Provider>
 															</div>

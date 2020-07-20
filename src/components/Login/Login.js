@@ -1,17 +1,22 @@
 import React,{useState} from 'react';
 import { creaUtenteDef, sha512 } from '../../utils';
 import './login.css';
+import { useHistory } from "react-router-dom";
+
+
 
 export default function Login() {
+
     const utente = creaUtenteDef();
     const[noval,setNoval] = useState(false);
+    let history = useHistory();
     const checkLogin = (ev) => {
         ev.preventDefault();
         console.log("sha512 ",sha512(ev.currentTarget.password.value + utente.salt));
         console.log("hash ",utente.hash);
         if(ev.currentTarget.email.value === utente.email && sha512(ev.currentTarget.password.value + utente.salt) === utente.hash){
             window.sessionStorage.setItem('user',JSON.stringify(utente));
-            window.location.href = "/";
+            history.go("/");
         }else{
             setNoval(true)
             ev.currentTarget.reset();

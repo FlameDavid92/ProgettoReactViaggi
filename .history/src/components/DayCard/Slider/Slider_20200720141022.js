@@ -2,7 +2,7 @@ import React from 'react'
 import './slider.css'
 
 export default function Slider({ images }) {
-    /*Attenzione se nell'array è presente una sola immagine, due o solo tre*/
+
     return (
         <div className='row '>
             <div className="col-12 col-lg-5 ">

@@ -103,7 +103,7 @@ export default function App() {
 													<Accordion key={citta.id} tipo="citta">
 														{citta.giorni.map((giorno, i) => {
 															return (
-																<div key={"giorno-"+i+"-citta-"+counter}>
+																<div key={"giorno-"+i+"citta-"+counter}>
 																	<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
 																		<div className="row">
 																			<div className="col-1">

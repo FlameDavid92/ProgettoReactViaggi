@@ -14,6 +14,15 @@ COVER
 
 .cover__filter{ background-color: rgb(61, 3, 3); opacity: 0.1; }
 
+.cover__container {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cover__copy__section{ position: absolute; bottom: 35px; right: 50px; }
+
 .cover__copy{
     color: white;
     position: relative;

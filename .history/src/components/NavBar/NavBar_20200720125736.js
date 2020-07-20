@@ -8,23 +8,10 @@ export default function NavBar({ navlinks, vizSensor }) {
         window.sessionStorage.removeItem('user');
         window.location.href = "/";
     }
-
     useEffect(() => {
-        if(vizSensor.header) setCurrentLink('');
-        else{ 
-            if(vizSensor.mappa) setCurrentLink('mappa');
-            else{
-                if(vizSensor.referente) setCurrentLink('referente');
-                else{
-                    if(vizSensor.viaggio) setCurrentLink('viaggio');
-                    else{
-                        if(vizSensor.info) setCurrentLink('info');
-                    }
-                }
-            } 
-        }
+        if(vizSensor.header) setCurrentLink('')
+        else{ if(vizSensor.mytravel) setCurrentLink('mappa') }
     }, [vizSensor]);
-
     return (
         <nav className="navbar sticky-top navbar-expand navbar-light my-nav">
             <div className="collapse navbar-collapse">
@@ -35,7 +22,7 @@ export default function NavBar({ navlinks, vizSensor }) {
                         return (
                             <li key={i} className="nav-item">
                                 <NavLink className="nav-link" key={i + 1}
-                                    to={"/#" + link.id}><span className={"font-link link-hover " + ((currentLink === link.id) ? 'mycolor-red' : '')}>{link.nome}</span></NavLink>
+                                    to={"/#" + link.id} onClick={()=>{setCurrentLink(link.id)}}><span className={"font-link link-hover " + ((currentLink === link.id) ? 'mycolor-red' : '')}>{link.nome}</span></NavLink>
                             </li>
                         )
                     })}

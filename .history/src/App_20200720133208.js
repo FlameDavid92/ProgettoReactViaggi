@@ -43,13 +43,13 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
-					<NavBar
-						vizSensor={{ header: vizHeader, mappa: vizMappa, referente: vizReferente, viaggio: vizViaggio, info: vizInfo }}
-						navlinks={
-							[{ id: 'mappa', nome: 'MAPPA' },
-							{ id: 'referente', nome: 'REFERENTE' },
-							{ id: 'viaggio', nome: 'VIAGGIO' },
-							{ id: 'info', nome: 'INFO' }]}>
+					<NavBar 
+					vizSensor={{ header: vizHeader, mappa: vizMappa, referente: vizReferente, viaggio: vizViaggio, info: vizInfo }} 
+					navlinks={
+						[{ id: 'mappa', nome: 'MAPPA' },
+						{ id: 'referente', nome: 'REFERENTE' },
+						{ id: 'viaggio', nome: 'VIAGGIO' },
+						{ id: 'info', nome: 'INFO' }]}>
 					</NavBar>
 
 					<MyContext.Provider value={{ titolo: datiJson.title, nomeCliente: datiJson.customerName, image: datiJson.images[0].image }}>
@@ -85,91 +85,76 @@ export default function App() {
 						</div>
 
 						<div className="anchor" id="viaggio"></div>
-						<VizSensor
-							partialVisibility={'top'}
-							onChange={(isVisible) => {
-								isVisible ? setVizViaggio(true) : setVizViaggio(false);
-							}}
-						>
-							<div className="row">
-								<div className="col-12">
-									{arrayCitta.map((citta, counter) => {
+						<div className="row">
+							<div className="col-12">
+								{arrayCitta.map((citta, counter) => {
 
-										return (
-											<div key={counter + "div"}>
-												<MyContext.Provider value={citta}>
-													<Accordion key={citta.id} tipo="citta">
-														{citta.giorni.map((giorno, i) => {
-															return (
-																<div key={i + "div"}>
-																	<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
-																		<div className="row">
-																			<div className="col-1">
-																				<Dayline giorno={x++} numeroAttivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
-																			</div>
-																			<div className="col-10">
-																				<DayCard boleano={i < 1} key={giorno.id} />
-																			</div>
-																			<div className="col-1" />
+									return (
+										<div key={counter + "div"}>
+											<MyContext.Provider value={citta}>
+												<Accordion key={citta.id} tipo="citta">
+													{citta.giorni.map((giorno, i) => {
+														return (
+															<div key={i + "div"}>
+																<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
+																	<div className="row">
+																		<div className="col-1">
+																			<Dayline giorno={x++} numeroAttivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
 																		</div>
-																	</MyContext.Provider>
-																</div>
-															)
-														})}
-													</Accordion>
-												</MyContext.Provider>
-											</div>
-										)
+																		<div className="col-10">
+																			<DayCard boleano={i < 1} key={giorno.id} />
+																		</div>
+																		<div className="col-1" />
+																	</div>
+																</MyContext.Provider>
+															</div>
+														)
+													})}
+												</Accordion>
+											</MyContext.Provider>
+										</div>
+									)
 
-									})}
-								</div>
+								})}
 							</div>
-						</VizSensor>
+						</div>
 						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
-						<VizSensor
-							partialVisibility={'top'}
-							onChange={(isVisible) => {
-								isVisible ? setVizInfo(true) : setVizInfo(false);
-							}}
-						>
-
-							<div className="row mr-0 ml-0" id="info">
-								<MyContext.Provider value={{ nome: "TARIFFE" }}>
-									<Accordion tipo="info">
-										<Tariffa dati={{
-											partecipants: datiJson.partecipants, priceTotal: datiJson.priceTotal,
-											included: datiJson.included, notIncluded: datiJson.notIncluded
-										}} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "NOTE" }}>
-									<Accordion tipo="info"><Note /></Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "DOCUMENTI RICHIESTI" }}>
-									<Accordion tipo="info">
-										<OnlyDescription description={datiJson.documentsRequested.description} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "ASSICURAZIONE" }}>
-									<Accordion tipo="info">
-										<OnlyDescription description={datiJson.documentsInsurance.description} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "CONDIZIONI DI CANCELLAZIONE" }}>
-									<Accordion tipo="info">
-										<OnlyDescription description={datiJson.documentsCancellation.description} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "CONDIZIONI DI PAGAMENTO" }}>
-									<Accordion tipo="info">
-										<OnlyDescription name={datiJson.documentsPayment.name} description={datiJson.documentsPayment.description} />
-									</Accordion>
-								</MyContext.Provider>
-							</div>
-						</VizSensor>
+						<div className="row mr-0 ml-0" id="info">
+							<MyContext.Provider value={{ nome: "TARIFFE" }}>
+								<Accordion tipo="info">
+									<Tariffa dati={{
+										partecipants: datiJson.partecipants, priceTotal: datiJson.priceTotal,
+										included: datiJson.included, notIncluded: datiJson.notIncluded
+									}} />
+								</Accordion>
+							</MyContext.Provider>
+							<MyContext.Provider value={{ nome: "NOTE" }}>
+								<Accordion tipo="info"><Note /></Accordion>
+							</MyContext.Provider>
+							<MyContext.Provider value={{ nome: "DOCUMENTI RICHIESTI" }}>
+								<Accordion tipo="info">
+									<OnlyDescription description={datiJson.documentsRequested.description} />
+								</Accordion>
+							</MyContext.Provider>
+							<MyContext.Provider value={{ nome: "ASSICURAZIONE" }}>
+								<Accordion tipo="info">
+									<OnlyDescription description={datiJson.documentsInsurance.description} />
+								</Accordion>
+							</MyContext.Provider>
+							<MyContext.Provider value={{ nome: "CONDIZIONI DI CANCELLAZIONE" }}>
+								<Accordion tipo="info">
+									<OnlyDescription description={datiJson.documentsCancellation.description} />
+								</Accordion>
+							</MyContext.Provider>
+							<MyContext.Provider value={{ nome: "CONDIZIONI DI PAGAMENTO" }}>
+								<Accordion tipo="info">
+									<OnlyDescription name={datiJson.documentsPayment.name} description={datiJson.documentsPayment.description} />
+								</Accordion>
+							</MyContext.Provider>
+						</div>
 						{/****************************************FINE ACCORDION INFO******************************************/}
 					</div> {/*chiusura div container-fluid*/}
 				</MyContext.Provider> {/*chiusura provider con value datiJson*/}

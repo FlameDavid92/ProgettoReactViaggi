@@ -20,16 +20,9 @@ const urlJSON = 'http://51.77.82.133:86/api/quotations/QUO_5e5e2952ae57f#'
 export default function App() {
 	utils.setCssVhVariable();
 	var x = 1
+	const [visibility, setVisibility] = useState('');
 	const [datiJson, setDatiJson] = useState(null);
 	const [arrayCitta, setArrayCitta] = useState([]);
-
-	/*Variabili di stato per la gestione della visibilità dei componenti*/
-	const [vizHeader, setVizHeader] = useState(false);
-	const [vizMappa, setVizMappa] = useState(false);
-	const [vizReferente, setVizReferente] = useState(false);
-	const [vizViaggio, setVizViaggio] = useState(false);
-	const [vizInfo, setVizInfo] = useState(false);
-
 	useEffect(() => {
 		const getDati = async () => {
 			const dati$ = await fetch(urlJSON).then(res => res.json());
@@ -43,22 +36,22 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
-					<NavBar
-						vizSensor={{ header: vizHeader, mappa: vizMappa, referente: vizReferente, viaggio: vizViaggio, info: vizInfo }}
-						navlinks={
-							[{ id: 'mappa', nome: 'MAPPA' },
-							{ id: 'referente', nome: 'REFERENTE' },
-							{ id: 'viaggio', nome: 'VIAGGIO' },
-							{ id: 'info', nome: 'INFO' }]}>
+					<NavBar currentHover={visibility} navlinks={
+						[{ id: 'mappa', nome: 'MAPPA' },
+						{ id: 'referente', nome: 'REFERENTE' },
+						{ id: 'viaggio', nome: 'VIAGGIO' },
+						{ id: 'info', nome: 'INFO' }]}>
 					</NavBar>
 
 					<MyContext.Provider value={{ titolo: datiJson.title, nomeCliente: datiJson.customerName, image: datiJson.images[0].image }}>
 						<VizSensor
-							partialVisibility={'top'}
+							partialVisibility
+							offset={{ top: 20 }}
 							onChange={(isVisible) => {
-								isVisible ? setVizHeader(true) : setVizHeader(false);
-							}}
-						><Header /></VizSensor>
+								isVisible && setVisibility('')
+							}}>
+							<Header />
+						</VizSensor>
 					</MyContext.Provider>
 
 					<div className="container-fluid my-5">
@@ -66,19 +59,23 @@ export default function App() {
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
 							<div className="anchor" id="mappa"></div>
 							<VizSensor
-								partialVisibility={'top'}
+								partialVisibility
+								offset={{ top: 20 }}
 								onChange={(isVisible) => {
-									isVisible ? setVizMappa(true) : setVizMappa(false);
-								}}
-							><MyTravel /></VizSensor>
+									isVisible ? setVisibility('mappa') : setVisibility('')
+								}}>
+								<MyTravel />
+							</VizSensor>
 						</MyContext.Provider>
 						<div className="mt-3">
 							<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 								<div className="anchor" id="referente"></div>
 								<VizSensor
-									partialVisibility={'top'}
+									partialVisibility
+									offset={{ top: 20 }}
 									onChange={(isVisible) => {
-										isVisible ? setVizReferente(true) : setVizReferente(false);
+										isVisible ? setVisibility('referente') : setVisibility('')
+
 									}}
 								><Referente /></VizSensor>
 							</MyContext.Provider>
@@ -86,9 +83,10 @@ export default function App() {
 
 						<div className="anchor" id="viaggio"></div>
 						<VizSensor
-							partialVisibility={'top'}
+							partialVisibility
+							offset={{ top: 20 }}
 							onChange={(isVisible) => {
-								isVisible ? setVizViaggio(true) : setVizViaggio(false);
+								isVisible ? setVisibility('viaggio') : setVisibility('')
 							}}
 						>
 							<div className="row">
@@ -130,12 +128,11 @@ export default function App() {
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
-							partialVisibility={'top'}
 							onChange={(isVisible) => {
-								isVisible ? setVizInfo(true) : setVizInfo(false);
+								isVisible ? setVisibility('info') : setVisibility('')
+
 							}}
 						>
-
 							<div className="row mr-0 ml-0" id="info">
 								<MyContext.Provider value={{ nome: "TARIFFE" }}>
 									<Accordion tipo="info">

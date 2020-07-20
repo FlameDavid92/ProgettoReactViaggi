@@ -20,16 +20,9 @@ const urlJSON = 'http://51.77.82.133:86/api/quotations/QUO_5e5e2952ae57f#'
 export default function App() {
 	utils.setCssVhVariable();
 	var x = 1
+	const [visibility, setVisibility] = useState('');
 	const [datiJson, setDatiJson] = useState(null);
 	const [arrayCitta, setArrayCitta] = useState([]);
-
-	/*Variabili di stato per la gestione della visibilità dei componenti*/
-	const [vizHeader, setVizHeader] = useState(false);
-	const [vizMappa, setVizMappa] = useState(false);
-	const [vizReferente, setVizReferente] = useState(false);
-	const [vizViaggio, setVizViaggio] = useState(false);
-	const [vizInfo, setVizInfo] = useState(false);
-
 	useEffect(() => {
 		const getDati = async () => {
 			const dati$ = await fetch(urlJSON).then(res => res.json());
@@ -43,99 +36,76 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
-					<NavBar
-						vizSensor={{ header: vizHeader, mappa: vizMappa, referente: vizReferente, viaggio: vizViaggio, info: vizInfo }}
-						navlinks={
-							[{ id: 'mappa', nome: 'MAPPA' },
-							{ id: 'referente', nome: 'REFERENTE' },
-							{ id: 'viaggio', nome: 'VIAGGIO' },
-							{ id: 'info', nome: 'INFO' }]}>
+					<NavBar currentHover={visibility} navlinks={
+						[{ id: 'mappa', nome: 'MAPPA' },
+						{ id: 'referente', nome: 'REFERENTE' },
+						{ id: 'viaggio', nome: 'VIAGGIO' },
+						{ id: 'info', nome: 'INFO' }]}>
 					</NavBar>
 
 					<MyContext.Provider value={{ titolo: datiJson.title, nomeCliente: datiJson.customerName, image: datiJson.images[0].image }}>
-						<VizSensor
-							partialVisibility={'top'}
-							onChange={(isVisible) => {
-								isVisible ? setVizHeader(true) : setVizHeader(false);
-							}}
-						><Header /></VizSensor>
+						<Header />
 					</MyContext.Provider>
 
 					<div className="container-fluid my-5">
 						{/**************************************INIZIO ACCORDION VIAGGIO*****************************************/}
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
 							<div className="anchor" id="mappa"></div>
-							<VizSensor
-								partialVisibility={'top'}
-								onChange={(isVisible) => {
-									isVisible ? setVizMappa(true) : setVizMappa(false);
-								}}
-							><MyTravel /></VizSensor>
+							<MyTravel />
 						</MyContext.Provider>
 						<div className="mt-3">
 							<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 								<div className="anchor" id="referente"></div>
-								<VizSensor
-									partialVisibility={'top'}
-									onChange={(isVisible) => {
-										isVisible ? setVizReferente(true) : setVizReferente(false);
-									}}
-								><Referente /></VizSensor>
+								<Referente />
 							</MyContext.Provider>
 						</div>
 
 						<div className="anchor" id="viaggio"></div>
-						<VizSensor
-							partialVisibility={'top'}
-							onChange={(isVisible) => {
-								isVisible ? setVizViaggio(true) : setVizViaggio(false);
-							}}
-						>
-							<div className="row">
-								<div className="col-12">
-									{arrayCitta.map((citta, counter) => {
+						<div className="row">
+							<div className="col-12">
+								{arrayCitta.map((citta, counter) => {
 
-										return (
-											<div key={counter + "div"}>
-												<MyContext.Provider value={citta}>
-													<Accordion key={citta.id} tipo="citta">
-														{citta.giorni.map((giorno, i) => {
-															return (
-																<div key={i + "div"}>
-																	<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
-																		<div className="row">
-																			<div className="col-1">
-																				<Dayline giorno={x++} numeroAttivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
-																			</div>
-																			<div className="col-10">
-																				<DayCard boleano={i < 1} key={giorno.id} />
-																			</div>
-																			<div className="col-1" />
+									return (
+										<div key={counter + "div"}>
+											<MyContext.Provider value={citta}>
+												<Accordion key={citta.id} tipo="citta">
+													{citta.giorni.map((giorno, i) => {
+														return (
+															<div key={i + "div"}>
+																<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
+																	<div className="row">
+																		<div className="col-1">
+																			<Dayline giorno={x++} numeroAttivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
 																		</div>
-																	</MyContext.Provider>
-																</div>
-															)
-														})}
-													</Accordion>
-												</MyContext.Provider>
-											</div>
-										)
+																		<div className="col-10">
+																			<DayCard boleano={i < 1} key={giorno.id} />
+																		</div>
+																		<div className="col-1" />
+																	</div>
+																</MyContext.Provider>
+															</div>
+														)
+													})}
+												</Accordion>
+											</MyContext.Provider>
+										</div>
+									)
 
-									})}
-								</div>
+								})}
 							</div>
-						</VizSensor>
+						</div>
 						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
-							partialVisibility={'top'}
+							partialVisibility
+							scrollCheck
 							onChange={(isVisible) => {
-								isVisible ? setVizInfo(true) : setVizInfo(false);
+								isVisible ? setVisibility('info') : setVisibility('')
+
 							}}
 						>
-
 							<div className="row mr-0 ml-0" id="info">
 								<MyContext.Provider value={{ nome: "TARIFFE" }}>
 									<Accordion tipo="info">

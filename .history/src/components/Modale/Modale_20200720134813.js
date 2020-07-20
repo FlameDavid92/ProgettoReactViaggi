@@ -32,5 +32,5 @@ export default function Modale({children,click}){
             </div>
             </div>
         )
-        : <></>, divModale);
+        : <></>, )
 }

@@ -43,7 +43,6 @@ export default function App() {
 		(datiJson != null && arrayCitta.length > 0) ?
 			<>
 				<div id="divModale"></div>
-				
 				<MyContext.Provider value={datiJson}> {/* Questo è il provider più esterno che ha come value tutto il data della fetch*/}
 					<NavBar
 						vizSensor={{ header: vizHeader, mappa: vizMappa, referente: vizReferente, viaggio: vizViaggio, info: vizInfo }}

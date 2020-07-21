@@ -5,23 +5,21 @@ import './navbar.css';
 
 export default function NavBar({ navlinks, vizSensor }) {
     const [currentLink,setCurrentLink] = useState("");
-    const history = useHistory();
     const logout = () => {
         window.sessionStorage.removeItem('user');
-        window.history.replaceState(null, null, "/");
-        history.go("/");
+        window.location.href = "/";
     }
 
     useEffect(() => {
-        if(vizSensor.header) {setCurrentLink(''); window.history.replaceState(null, null, "/");}
+        if(vizSensor.header) {setCurrentLink(''); window.location.hash='';}
         else{ 
-            if(vizSensor.mappa) {setCurrentLink('mappa'); window.history.replaceState(null, null, "/#mappa");}
+            if(vizSensor.mappa) {setCurrentLink('mappa'); window.location.hash='mappa';}
             else{
-                if(vizSensor.referente) {setCurrentLink('referente'); window.history.replaceState(null, null, "/#referente");}
+                if(vizSensor.referente) {setCurrentLink('referente'); window.location.hash='referente';}
                 else{
-                    if(vizSensor.viaggio) {setCurrentLink('viaggio'); window.history.replaceState(null, null, "/#viaggio");}
+                    if(vizSensor.viaggio) {setCurrentLink('viaggio'); window.location.hash='viaggio';}
                     else{
-                        if(vizSensor.info) {setCurrentLink('info'); window.history.replaceState(null, null, "/#info");}
+                        if(vizSensor.info) {setCurrentLink('info'); window.location.hash='info';}
                     }
                 }
             } 

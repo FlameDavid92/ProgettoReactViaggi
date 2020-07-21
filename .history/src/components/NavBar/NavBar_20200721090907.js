@@ -13,15 +13,15 @@ export default function NavBar({ navlinks, vizSensor }) {
     }
 
     useEffect(() => {
-        if(vizSensor.header) {setCurrentLink(''); window.history.replaceState(null, null, "/");}
+        if(vizSensor.header) {setCurrentLink('');}
         else{ 
-            if(vizSensor.mappa) {setCurrentLink('mappa'); window.history.replaceState(null, null, "/#mappa");}
+            if(vizSensor.mappa) {setCurrentLink('mappa');}
             else{
-                if(vizSensor.referente) {setCurrentLink('referente'); window.history.replaceState(null, null, "/#referente");}
+                if(vizSensor.referente) {setCurrentLink('referente');}
                 else{
-                    if(vizSensor.viaggio) {setCurrentLink('viaggio'); window.history.replaceState(null, null, "/#viaggio");}
+                    if(vizSensor.viaggio) {setCurrentLink('viaggio');}
                     else{
-                        if(vizSensor.info) {setCurrentLink('info'); window.history.replaceState(null, null, "/#info");}
+                        if(vizSensor.info) {setCurrentLink('info');}
                     }
                 }
             } 

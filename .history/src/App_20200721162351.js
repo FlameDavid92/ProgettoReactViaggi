@@ -153,31 +153,31 @@ export default function App() {
 										}} />
 									</Accordion>
 								</MyContext.Provider>
-							</VizSensor>
-							<MyContext.Provider value={{ nome: "NOTE" }}>
-								<Accordion tipo="info"><Note /></Accordion>
-							</MyContext.Provider>
-							<MyContext.Provider value={{ nome: "DOCUMENTI RICHIESTI" }}>
-								<Accordion tipo="info">
-									<OnlyDescription description={datiJson.documentsRequested.description} />
-								</Accordion>
-							</MyContext.Provider>
-							<MyContext.Provider value={{ nome: "ASSICURAZIONE" }}>
-								<Accordion tipo="info">
-									<OnlyDescription description={datiJson.documentsInsurance.description} />
-								</Accordion>
-							</MyContext.Provider>
-							<MyContext.Provider value={{ nome: "CONDIZIONI DI CANCELLAZIONE" }}>
-								<Accordion tipo="info">
-									<OnlyDescription description={datiJson.documentsCancellation.description} />
-								</Accordion>
-							</MyContext.Provider>
-							<MyContext.Provider value={{ nome: "CONDIZIONI DI PAGAMENTO" }}>
-								<Accordion tipo="info">
-									<OnlyDescription name={datiJson.documentsPayment.name} description={datiJson.documentsPayment.description} />
-								</Accordion>
-							</MyContext.Provider>
-						</div>
+								</VizSensor>
+								<MyContext.Provider value={{ nome: "NOTE" }}>
+									<Accordion tipo="info"><Note /></Accordion>
+								</MyContext.Provider>
+								<MyContext.Provider value={{ nome: "DOCUMENTI RICHIESTI" }}>
+									<Accordion tipo="info">
+										<OnlyDescription description={datiJson.documentsRequested.description} />
+									</Accordion>
+								</MyContext.Provider>
+								<MyContext.Provider value={{ nome: "ASSICURAZIONE" }}>
+									<Accordion tipo="info">
+										<OnlyDescription description={datiJson.documentsInsurance.description} />
+									</Accordion>
+								</MyContext.Provider>
+								<MyContext.Provider value={{ nome: "CONDIZIONI DI CANCELLAZIONE" }}>
+									<Accordion tipo="info">
+										<OnlyDescription description={datiJson.documentsCancellation.description} />
+									</Accordion>
+								</MyContext.Provider>
+								<MyContext.Provider value={{ nome: "CONDIZIONI DI PAGAMENTO" }}>
+									<Accordion tipo="info">
+										<OnlyDescription name={datiJson.documentsPayment.name} description={datiJson.documentsPayment.description} />
+									</Accordion>
+								</MyContext.Provider>
+							</div>
 						{/****************************************FINE ACCORDION INFO******************************************/}
 					</div> {/*chiusura div container-fluid*/}
 				</MyContext.Provider> {/*chiusura provider con value datiJson*/}

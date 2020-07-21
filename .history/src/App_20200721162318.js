@@ -178,10 +178,11 @@ export default function App() {
 								</Accordion>
 							</MyContext.Provider>
 						</div>
-						{/****************************************FINE ACCORDION INFO******************************************/}
+						</VizSensor>
+					{/****************************************FINE ACCORDION INFO******************************************/}
 					</div> {/*chiusura div container-fluid*/}
-				</MyContext.Provider> {/*chiusura provider con value datiJson*/}
-				<Footer></Footer>
+			</MyContext.Provider> {/*chiusura provider con value datiJson*/ }
+	<Footer></Footer>
 			</>
 			: <></>
 	);

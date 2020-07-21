@@ -127,6 +127,14 @@ export default function App() {
 													</Accordion>
 												</MyContext.Provider>
 											</VizSensor>
+											<VizSensor
+												scrollCheck={true}
+												partialVisibility={'bottom'}
+												offset={{ bottom: -100 }}
+												onChange={(isVisible) => {
+													isVisible ? setVizInfo(true) : setVizInfo(false);
+												}}
+											><div className="pixel"/></VizSensor>
 										</div>
 									)
 								})}

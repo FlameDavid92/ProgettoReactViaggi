@@ -33,7 +33,7 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                             <Modale click={modPernottamento}>
                                 <div className="row">
                                     <div className="col-8 offset-2"> 
-                                {/*<Slider images={acc.images}></Slider>/*/}
+                                <Slider images={acc.images}></Slider>
                                 <p>{acc.description}</p>
 
                                     </div>

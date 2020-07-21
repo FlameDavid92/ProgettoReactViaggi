@@ -16,6 +16,7 @@ export default function Slider({apriModale, images }) {
                 <div style={{ backgroundImage: `url('${images[1].image}')` }} className=' img-tiny text-center  cover '>
                     <div className='hoverImg d-flex flex-column ' onClick={apriModale}>
                         <span className='my-auto length '>+{images.length - 3}</span>
+
                     </div>
                 </div>
             </div>

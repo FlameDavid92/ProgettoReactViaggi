@@ -21,7 +21,7 @@ export default function Trasferimento() {
                         </div>
                         <div className='col-10'>
                             <p className='h4'>{transfer.name}</p>
-                            <p><span className='taglia-testo'>{transfer.description}</span><Link to="" onClick={() => utils.funzioneApriModale(setModTrasferimento, modTrasferimento)}>Scopri di più</Link></p>
+                            <p className='taglia-testo'>{transfer.description}...<Link to="" onClick={() => utils.funzioneApriModale(setModTrasferimento, modTrasferimento)}>Scopri di più</Link></p>
                             <Modale click={modTrasferimento}>
                                 <div className="row">
                                     <div className="col-8 offset-2">

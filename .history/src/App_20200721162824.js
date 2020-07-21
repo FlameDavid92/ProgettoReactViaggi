@@ -99,7 +99,8 @@ export default function App() {
 										<div key={"citta-" + counter}>
 											<VizSensor
 												scrollCheck={true}
-												partialVisibility={'top'}
+												partialVisibility={'bottom'}
+												offset={{ bottom: -200 }}
 												onChange={(isVisible) => {
 													isVisible ? setVizViaggio(true) : setVizViaggio(false);
 												}}

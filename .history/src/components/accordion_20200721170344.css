@@ -55,9 +55,9 @@
 
 @media screen and (max-width: 415px){
     .titoloAccordion {
-        font-size: 15px;
+        font-size: 6px;
     }
     .date-text {
-        font-size: 13px;
+        font-size: 6px;
     }
 }

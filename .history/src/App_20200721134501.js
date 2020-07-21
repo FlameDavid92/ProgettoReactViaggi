@@ -90,22 +90,20 @@ export default function App() {
 						</div>
 
 						<div className="anchor" id="viaggio"></div>
-
 						<div className="row">
 							<div className="col-12">
 								{arrayCitta.map((citta, counter) => {
 
 									return (
 										<div key={"citta-" + counter}>
-											<VizSensor
-												scrollCheck={true}
-												partialVisibility={'top'}
-												onChange={(isVisible) => {
-													isVisible ? setVizViaggio(true) : setVizViaggio(false);
-												}}
-											>
-
-												<MyContext.Provider value={citta}>
+											<MyContext.Provider value={citta}>
+												<VizSensor
+													scrollCheck={true}
+													partialVisibility={'top'}
+													onChange={(isVisible) => {
+														isVisible ? setVizViaggio(true) : setVizViaggio(false);
+													}}
+												>
 													<Accordion key={citta.id} tipo="citta">
 														{citta.giorni.map((giorno, i) => {
 															return (
@@ -124,64 +122,64 @@ export default function App() {
 																</div>
 															)
 														})}
-													</Accordion>
+													</Accordion></VizSensor>
 												</MyContext.Provider>
-											</VizSensor>
-										</div>
-									)
-								})}
-							</div>
-						</div>
-						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
+											</div>
+										)
 
-						{/****************************************INIZIO ACCORDION INFO******************************************/}
-						<div className="anchor" id="info"></div>
-						<VizSensor
-							scrollCheck={true}
-							partialVisibility={'bottom'}
-							offset={{ bottom: -200 }}
-							onChange={(isVisible) => {
-								isVisible ? setVizInfo(true) : setVizInfo(false);
-							}}
-						>
-							<div className="row mr-0 ml-0" id="info">
-								<MyContext.Provider value={{ nome: "TARIFFE" }}>
-									<Accordion tipo="info">
-										<Tariffa dati={{
-											partecipants: datiJson.partecipants, priceTotal: datiJson.priceTotal,
-											included: datiJson.included, notIncluded: datiJson.notIncluded
-										}} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "NOTE" }}>
-									<Accordion tipo="info"><Note /></Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "DOCUMENTI RICHIESTI" }}>
-									<Accordion tipo="info">
-										<OnlyDescription description={datiJson.documentsRequested.description} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "ASSICURAZIONE" }}>
-									<Accordion tipo="info">
-										<OnlyDescription description={datiJson.documentsInsurance.description} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "CONDIZIONI DI CANCELLAZIONE" }}>
-									<Accordion tipo="info">
-										<OnlyDescription description={datiJson.documentsCancellation.description} />
-									</Accordion>
-								</MyContext.Provider>
-								<MyContext.Provider value={{ nome: "CONDIZIONI DI PAGAMENTO" }}>
-									<Accordion tipo="info">
-										<OnlyDescription name={datiJson.documentsPayment.name} description={datiJson.documentsPayment.description} />
-									</Accordion>
-								</MyContext.Provider>
+									})}
+										</div>
 							</div>
-						</VizSensor>
-						{/****************************************FINE ACCORDION INFO******************************************/}
-					</div> {/*chiusura div container-fluid*/}
+							{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
+
+							{/****************************************INIZIO ACCORDION INFO******************************************/}
+							<div className="anchor" id="info"></div>
+							<VizSensor
+								scrollCheck={true}
+								partialVisibility={'top'}
+								onChange={(isVisible) => {
+									isVisible ? setVizInfo(true) : setVizInfo(false);
+								}}
+							>
+
+								<div className="row mr-0 ml-0" id="info">
+									<MyContext.Provider value={{ nome: "TARIFFE" }}>
+										<Accordion tipo="info">
+											<Tariffa dati={{
+												partecipants: datiJson.partecipants, priceTotal: datiJson.priceTotal,
+												included: datiJson.included, notIncluded: datiJson.notIncluded
+											}} />
+										</Accordion>
+									</MyContext.Provider>
+									<MyContext.Provider value={{ nome: "NOTE" }}>
+										<Accordion tipo="info"><Note /></Accordion>
+									</MyContext.Provider>
+									<MyContext.Provider value={{ nome: "DOCUMENTI RICHIESTI" }}>
+										<Accordion tipo="info">
+											<OnlyDescription description={datiJson.documentsRequested.description} />
+										</Accordion>
+									</MyContext.Provider>
+									<MyContext.Provider value={{ nome: "ASSICURAZIONE" }}>
+										<Accordion tipo="info">
+											<OnlyDescription description={datiJson.documentsInsurance.description} />
+										</Accordion>
+									</MyContext.Provider>
+									<MyContext.Provider value={{ nome: "CONDIZIONI DI CANCELLAZIONE" }}>
+										<Accordion tipo="info">
+											<OnlyDescription description={datiJson.documentsCancellation.description} />
+										</Accordion>
+									</MyContext.Provider>
+									<MyContext.Provider value={{ nome: "CONDIZIONI DI PAGAMENTO" }}>
+										<Accordion tipo="info">
+											<OnlyDescription name={datiJson.documentsPayment.name} description={datiJson.documentsPayment.description} />
+										</Accordion>
+									</MyContext.Provider>
+								</div>
+							</VizSensor>
+							{/****************************************FINE ACCORDION INFO******************************************/}
+						</div> {/*chiusura div container-fluid*/}
 				</MyContext.Provider> {/*chiusura provider con value datiJson*/}
-				<Footer></Footer>
+					<Footer></Footer>
 			</>
 			: <></>
 	);

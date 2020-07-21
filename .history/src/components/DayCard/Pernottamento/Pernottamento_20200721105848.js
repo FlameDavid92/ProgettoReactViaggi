@@ -23,17 +23,17 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                         </div>
                         <div className='col-7'>
                             <div className='contain-image'>
-                                <Slider apriModale={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)} images={acc.images}></Slider>
+                                <Slider images={acc.images}></Slider>
                             </div>
                         </div>
                         <div className='col-5'>
                             <p>{acc.name} {(acc.stars.includes('Luxury') ? acc.stars : acc.stars + '*')}</p>
                             <button className='btn btn-outline-primary disabled'>{acc.places[0].name}</button>
-                            <p><span className='taglia-testo-pernottamento' >{acc.description}</span><Link to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link></p>
+                            <p><span className='taglia-testo-pernottamento' >{acc.description}</span>..<Link to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link></p>
                             <Modale click={modPernottamento}>
                                 <div className="row">
                                     <div className="col-8 offset-2"> 
-                                <Slider apriModale={false} images={acc.images}></Slider>
+                                <Slider images={acc.images}></Slider>
                                 <p>{acc.description}</p>
 
                                     </div>

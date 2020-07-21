@@ -90,26 +90,17 @@ export default function App() {
 						</div>
 
 						<div className="anchor" id="viaggio"></div>
+							<div className="row">
+								<div className="col-12">
+									{arrayCitta.map((citta, counter) => {
 
-						<div className="row">
-							<div className="col-12">
-								{arrayCitta.map((citta, counter) => {
-
-									return (
-										<div key={"citta-" + counter}>
-											<VizSensor
-												scrollCheck={true}
-												partialVisibility={'top'}
-												onChange={(isVisible) => {
-													isVisible ? setVizViaggio(true) : setVizViaggio(false);
-												}}
-											>
-
+										return (
+											<div key={"citta-"+counter}>
 												<MyContext.Provider value={citta}>
 													<Accordion key={citta.id} tipo="citta">
 														{citta.giorni.map((giorno, i) => {
 															return (
-																<div key={"giorno-" + i + "-citta-" + counter}>
+																<div key={"giorno-"+i+"-citta-"+counter}>
 																	<MyContext.Provider value={{ giorno: giorno, numeroGiorni: citta.giorni.length }}>
 																		<div className="row">
 																			<div className="col-1">
@@ -126,24 +117,24 @@ export default function App() {
 														})}
 													</Accordion>
 												</MyContext.Provider>
-											</VizSensor>
-										</div>
-									)
-								})}
+											</div>
+										)
+
+									})}
+								</div>
 							</div>
-						</div>
 						{/****************************************FINE ACCORDION VIAGGIO*****************************************/}
 
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
 							scrollCheck={true}
-							partialVisibility={'bottom'}
-							offset={{ bottom: -200 }}
+							partialVisibility={'top'}
 							onChange={(isVisible) => {
 								isVisible ? setVizInfo(true) : setVizInfo(false);
 							}}
 						>
+
 							<div className="row mr-0 ml-0" id="info">
 								<MyContext.Provider value={{ nome: "TARIFFE" }}>
 									<Accordion tipo="info">

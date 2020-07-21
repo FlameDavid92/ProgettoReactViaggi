@@ -56,7 +56,6 @@ export default function App() {
 
 					<MyContext.Provider value={{ titolo: datiJson.title, nomeCliente: datiJson.customerName, image: datiJson.images[0].image }}>
 						<VizSensor
-							scrollCheck={true}
 							partialVisibility={'top'}
 							onChange={(isVisible) => {
 								isVisible ? setVizHeader(true) : setVizHeader(false);
@@ -69,7 +68,6 @@ export default function App() {
 						<MyContext.Provider value={{ citta: arrayCitta.map(citta => { return { nome: citta.nome, posizione: citta.coordinate } }), dateFrom: datiJson.dateFrom, dateTo: datiJson.dateTo, partecipanti: datiJson.partecipants }}>
 							<div className="anchor" id="mappa"></div>
 							<VizSensor
-								scrollCheck={true}
 								partialVisibility={'top'}
 								onChange={(isVisible) => {
 									isVisible ? setVizMappa(true) : setVizMappa(false);
@@ -80,7 +78,6 @@ export default function App() {
 							<MyContext.Provider value={{ operator: datiJson.operator, agency: datiJson.agency }}>
 								<div className="anchor" id="referente"></div>
 								<VizSensor
-									scrollCheck={true}
 									partialVisibility={'top'}
 									onChange={(isVisible) => {
 										isVisible ? setVizReferente(true) : setVizReferente(false);
@@ -98,7 +95,6 @@ export default function App() {
 									return (
 										<div key={"citta-" + counter}>
 											<VizSensor
-												scrollCheck={true}
 												partialVisibility={'top'}
 												onChange={(isVisible) => {
 													isVisible ? setVizViaggio(true) : setVizViaggio(false);
@@ -137,7 +133,6 @@ export default function App() {
 						{/****************************************INIZIO ACCORDION INFO******************************************/}
 						<div className="anchor" id="info"></div>
 						<VizSensor
-							scrollCheck={true}
 							partialVisibility={'bottom'}
 							offset={{ bottom: -200 }}
 							onChange={(isVisible) => {

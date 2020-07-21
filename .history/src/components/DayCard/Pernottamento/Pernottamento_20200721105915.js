@@ -23,7 +23,7 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                         </div>
                         <div className='col-7'>
                             <div className='contain-image'>
-                                <Slider apriModale={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)} images={acc.images}></Slider>
+                                <Slider images={acc.images}></Slider>
                             </div>
                         </div>
                         <div className='col-5'>
@@ -33,7 +33,7 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
                             <Modale click={modPernottamento}>
                                 <div className="row">
                                     <div className="col-8 offset-2"> 
-                                <Slider apriModale={false} images={acc.images}></Slider>
+                                <Slider images={acc.images}></Slider>
                                 <p>{acc.description}</p>
 
                                     </div>

@@ -205,3 +205,20 @@ div.pixel {
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
+
+.taglia-testo-pernottamento {
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+
+/* 
+
+display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+*/

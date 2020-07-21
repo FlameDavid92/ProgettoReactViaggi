@@ -90,22 +90,20 @@ export default function App() {
 						</div>
 
 						<div className="anchor" id="viaggio"></div>
-
 						<div className="row">
 							<div className="col-12">
 								{arrayCitta.map((citta, counter) => {
 
 									return (
 										<div key={"citta-" + counter}>
-											<VizSensor
-												scrollCheck={true}
-												partialVisibility={'top'}
-												onChange={(isVisible) => {
-													isVisible ? setVizViaggio(true) : setVizViaggio(false);
-												}}
-											>
-
-												<MyContext.Provider value={citta}>
+											<MyContext.Provider value={citta}>
+												<VizSensor
+													scrollCheck={true}
+													partialVisibility={'top'}
+													onChange={(isVisible) => {
+														isVisible ? setVizViaggio(true) : setVizViaggio(false);
+													}}
+												>
 													<Accordion key={citta.id} tipo="citta">
 														{citta.giorni.map((giorno, i) => {
 															return (
@@ -124,11 +122,11 @@ export default function App() {
 																</div>
 															)
 														})}
-													</Accordion>
-												</MyContext.Provider>
-											</VizSensor>
+													</Accordion></VizSensor>
+											</MyContext.Provider>
 										</div>
 									)
+
 								})}
 							</div>
 						</div>
@@ -138,12 +136,12 @@ export default function App() {
 						<div className="anchor" id="info"></div>
 						<VizSensor
 							scrollCheck={true}
-							partialVisibility={'bottom'}
-							offset={{ bottom: -200 }}
+							partialVisibility={'top'}
 							onChange={(isVisible) => {
 								isVisible ? setVizInfo(true) : setVizInfo(false);
 							}}
 						>
+
 							<div className="row mr-0 ml-0" id="info">
 								<MyContext.Provider value={{ nome: "TARIFFE" }}>
 									<Accordion tipo="info">

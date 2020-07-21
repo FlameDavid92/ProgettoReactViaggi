@@ -29,15 +29,3 @@ COVER
 .cover__titolo{
     font-size: 40px;
 }
-
-@media screen and (max-width: 768px) {
-    .cover__titolo{
-        font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 415px){
-    .cover__titolo{
-        font-size: 25px;
-    }
-}

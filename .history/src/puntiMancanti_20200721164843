@@ -1,4 +1,4 @@
-
+1-titoli header 1 riga,
 3-nomi accordion (lunghi) vanno messo piu piccoli ( 2 media query una per i dispositivi piccoli), 
 4-componenti separati --> classi separate non in index css, titoli accordion + piccoli, 
 5-mediaquery foto vh x dispostivi mobile, mediquery x modali dispositivi mobile, 

@@ -30,13 +30,13 @@ COVER
     font-size: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .cover__titolo{
         font-size: 30px;
     }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 575px){
     .cover__titolo{
         font-size: 25px;
     }

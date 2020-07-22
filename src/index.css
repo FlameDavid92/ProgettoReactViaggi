@@ -18,43 +18,33 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
+/*Taglia il testo a due line*/
+.taglia-testo {
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* Per tutti i bottoni di classe btn del progetto a meno di diversa specifica su css dei componenti.*/
 button.btn{
     border-radius: 20px;
 }
 
-/*DA RIVEDERE...*/
-
-
 /* COLORI */
-
-.primary-color {
-    color: rgb(245, 174, 21);
-}
-.secondary-color {
-    color: rgb(129, 129, 129)
-}
-.tertiary-color {
-    color: rgb(2, 102, 216);
-}
-.quaternary-color {
-    color: rgb(207, 10, 16);
-}
 .mycolor-orange {
     color: rgb(245, 174, 21);
 }
 .mycolor-red {
     color: rgb(207, 10, 16);
 }
-.color-orange {
-    color: rgb(245, 174, 21);
-}
 .mycolor-grey {
     color: rgb(129, 129, 129);
 }
-.color-text-grey {
-    color: rgb(68, 67, 67);
+.mycolor-grey2 {
+    color:rgb(224, 212, 212);
 }
-
 
 /* TITOLI E TESTI */
 .bigTitle {
@@ -70,20 +60,27 @@ button.btn{
     font-family: 'Roboto';
     font-weight: bold;
 }
-.text-small {
-    font-size: 14px;
-}
-.subTitle {
+.sub-title {
     font-size: 20px;
 }
-.largeText {
-    font-size: 28px;
+
+.text-small {
+    font-size: 15px;
     font-family: 'Roboto';
 }
+
+/**/
+
 .mediumText {
     font-size: 20px;
     font-family: 'Roboto';
 }
+
+.largeText {
+    font-size: 28px;
+    font-family: 'Roboto';
+}
+
 .tinyText {
     font-size: 1rem;
     font-family: 'Roboto';
@@ -116,15 +113,23 @@ button.btn{
     height: auto;
 }
 
-@media screen and (max-width: 768px) {
-    .bigTitle {
-        font-size: 36px;
+@media screen and (max-width: 767px) {
+    .text-small{
+        font-size: 12px;
     }
+    .title {
+        font-size: 16px;
+    }
+    .sub-title {
+        font-size: 14px;
+    }
+
+
     .mediumTitle {
         font-size: 28px;
     }
-    .title {
-        font-size: 20px;
+    .bigTitle {
+        font-size: 36px;
     }
     .subTitle {
         font-size: 16px;
@@ -146,33 +151,33 @@ button.btn{
         width: 100px;
         height: 100px;
     }
-    .img-cover {
-        object-fit: cover;
-        height: 40vh!important;
-        width: 100%;
-    }
 }
 
-.img-cover {
-    object-fit: cover;
-    height: 70vh;
-    width: 100%;
-}
 
-div.anchor {
-    display: block;
-    position: relative;
-    top: calc(-1 * var(--myheight-navbar));
-}
 
-div.pixel {
-    width: 1px;
-    height: 1px;
-}
 
-.taglia-testo {
-    display: -webkit-inline-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+
+
+/*
+.primary-color {
+    color: rgb(245, 174, 21);
 }
+.secondary-color {
+    color: rgb(129, 129, 129)
+}
+.tertiary-color {
+    color: rgb(2, 102, 216);
+}
+.quaternary-color {
+    color: rgb(207, 10, 16);
+}
+.color-orange {
+    color: rgb(245, 174, 21);
+}
+.mycolor-grey {
+    color: rgb(129, 129, 129);
+}
+.color-text-grey {
+    color: rgb(68, 67, 67);
+}
+*/

@@ -1,7 +1,6 @@
 import React from 'react'
 import MyContext from '../../MyContext'
 import Presentazione from './Presentazione/Presentazione'
-import './daycard.css'
 import Trasferimento from './Trasferimento/Trasferimento';
 import Pernottamento from './Pernottamento/Pernottamento';
 import Attivita from './Attivita/Attivita';
@@ -27,10 +26,11 @@ export default function DayCard({boleano}) {
             <CheckInclude></CheckInclude>
             
             </MyContext.Provider>
-
-            <MyContext.Provider value={contesto.giorno.accomodations}>
-               {(contesto.giorno.accomodations.length>0 && <Pernottamento boleano ={boleano} numeroGiorni = {contesto.numeroGiorni}></Pernottamento>) }
-            </MyContext.Provider>
+            <div className="order-md-2">
+                <MyContext.Provider value={contesto.giorno.accomodations}>
+                    {(contesto.giorno.accomodations.length>0 && <Pernottamento boleano ={boleano} numeroGiorni = {contesto.numeroGiorni}></Pernottamento>) }
+                </MyContext.Provider>
+            </div>
             
             
             

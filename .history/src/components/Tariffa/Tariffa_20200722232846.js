@@ -1,4 +1,5 @@
 import React from 'react';
+import './tariffa.css';
 
 export default function Tariffa({ dati }) {
     return (
@@ -9,7 +10,7 @@ export default function Tariffa({ dati }) {
                         <div className="accordion__price black">
                             <div className="single__price">
                                 <p className="mb-0">Prezzo a persona</p>
-                                <p className="mycolor-orange title">{((dati.partecipants[0].price)).toFixed(2) + ' €'}</p>
+                                <p className="mycolor-orange">{((dati.partecipants[0].price)).toFixed(2) + ' €'}</p>
                             </div>
                             <hr />
                             {
@@ -19,19 +20,19 @@ export default function Tariffa({ dati }) {
                             }
                             <hr />
                             <div className="total__price text-right">
-                                <p className="mb-0">TOTALE</p>
-                                <p className="mycolor-orange title">{((dati.priceTotal) / 100).toFixed(2) + '€'}</p>
+                                <p className="mb-0">Totale</p>
+                                <p className="mycolor-orange">{((dati.priceTotal) / 100).toFixed(2) + '€'}</p>
                             </div>
-                            <div className="price__included mycolor-grey text-medium">
-                                <p className="mycolor-orange title">COSA COMPRENDE IL PREZZO</p>
+                            <div className="price__included mycolor-grey">
+                                <p className="mycolor-orange sub-title">Cosa Comprende il prezzo</p>
                                 <p>{dati.included}</p>
                                 <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum dolor adipisicing elit:</p>
                                 <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
                                 <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
                                 <p>Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>
                             </div>
-                            <div className="price__included mycolor-grey text-medium">
-                                <p className="mycolor-orange title">COSA NON COMPRENDE IL PREZZO</p>
+                            <div className="price__included mycolor-grey">
+                                <p className="mycolor-orange sub-title">Cosa Non Comprende il prezzo</p>
                                 <p>{dati.notIncluded}</p>
                                 <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum dolor adipisicing elit:</p>
                                 <p className="mb-0">Dolor sit orem ipsum dolor amet conseurem ipsum olor sit orem ipsum dolor amet conseurem ipsum olor sit orem</p>

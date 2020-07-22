@@ -116,7 +116,7 @@ export default function App() {
 																				<Dayline giorno={x++} numeroAttivita={giorno.activities.length} transports={giorno.transports} end={(i + 1) === citta.giorni.length} />
 																			</div>
 																			<div className="col-10">
-																				<DayCard primoGiorno={i < 1} key={giorno.id} />
+																				<DayCard boleano={i < 1} key={giorno.id} />
 																			</div>
 																			<div className="col-1" />
 																		</div>

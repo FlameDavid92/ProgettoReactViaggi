@@ -47,6 +47,14 @@ button.btn{
 }
 
 /* TITOLI E TESTI */
+.bigTitle {
+    font-size: 42px;
+    font-family: 'Roboto';
+}
+.mediumTitle {
+    font-size: 36px;
+    font-family: 'Roboto';
+}
 .title {
     font-size: 24px;
     font-family: 'Roboto';
@@ -66,14 +74,6 @@ button.btn{
 }
 
 /**/
-.bigTitle {
-    font-size: 42px;
-    font-family: 'Roboto';
-}
-.mediumTitle {
-    font-size: 36px;
-    font-family: 'Roboto';
-}
 
 .mediumText {
     font-size: 20px;

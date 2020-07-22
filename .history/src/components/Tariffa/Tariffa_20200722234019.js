@@ -1,4 +1,5 @@
 import React from 'react';
+import './tariffa.css';
 
 export default function Tariffa({ dati }) {
     return (

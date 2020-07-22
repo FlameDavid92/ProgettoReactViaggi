@@ -6,14 +6,15 @@ import Pernottamento from './Pernottamento/Pernottamento';
 import Attivita from './Attivita/Attivita';
 import CheckInclude from './CheckInclude/CheckInclude'
 
-export default function DayCard({ primoGiorno }) {
+
+export default function DayCard({ boleano }) {
     const contesto = React.useContext(MyContext);
     return (
         <>
             <div className="row">
                 <div className="col-12 order-md-2">
                     <MyContext.Provider value={contesto.giorno.accomodations}>
-                        {(contesto.giorno.accomodations.length > 0 && <Pernottamento booleano={primoGiorno} numeroGiorni={contesto.numeroGiorni}></Pernottamento>)}
+                        {(contesto.giorno.accomodations.length > 0 && <Pernottamento boleano={boleano} numeroGiorni={contesto.numeroGiorni}></Pernottamento>)}
                     </MyContext.Provider>
                 </div>
                 <div className="col-12 order-md-1">

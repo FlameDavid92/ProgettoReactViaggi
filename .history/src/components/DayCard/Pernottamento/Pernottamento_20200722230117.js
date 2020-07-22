@@ -6,14 +6,16 @@ import { Link } from 'react-router-dom';
 import * as utils from '../../../utils';
 import './pernottamento.css';
 
-export default function Pernottamento({ numeroGiorni, booleano }) {
+export default function Pernottamento({ numeroGiorni, boleano }) {
     const contesto = React.useContext(MyContext);
     const [modPernottamento, setModPernottamento] = useState(0);
     let numeroNotti = numeroGiorni - 1;
     let titoloAccomodation = contesto[0].name + ' ' + contesto[0].stars;
     return (
         <>
-            {booleano && contesto.map((acc, i) => {
+
+            {boleano && contesto.map((acc, i) => {
+
                 return (
                     <div className='row' key={"accomodation"-i}>
                         <div className='col-12 '>
@@ -41,7 +43,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                     </div>
                 )
             })}
-            {!booleano && <div><p className='h3 color-reminder-pernottamento nomobile'>Ricordati che pernotti al <span className='text-pernottamento'>{titoloAccomodation}</span></p></div>}
+            {!boleano && <div><p className='h3 color-reminder-pernottamento nomobile'>Ricordati che pernotti al <span className='text-pernottamento'>{titoloAccomodation}</span></p></div>}
         </>
     )
 }

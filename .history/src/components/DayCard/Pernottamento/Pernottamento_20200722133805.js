@@ -17,7 +17,7 @@ export default function Pernottamento({ numeroGiorni, boleano }) {
             {boleano && contesto.map((acc, i) => {
 
                 return (
-                    <div className='row' key={"accomodation"-i}>
+                    <div className='row my-5' key={"accomodation"-i}>
                         <div className='col-12 '>
                             <h2 className='text-mobile mycolor-grey'>Pernottamento {numeroNotti} {((numeroNotti) > 1) ? 'notti' : 'notte'} </h2>
                         </div>

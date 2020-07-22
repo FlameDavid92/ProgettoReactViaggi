@@ -18,12 +18,6 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
-button.btn{
-    border-radius: 20px;
-}
-
-/*DA RIVEDERE...*/
-
 
 /* COLORI */
 
@@ -151,6 +145,15 @@ button.btn{
         height: 40vh!important;
         width: 100%;
     }
+}
+
+
+/*DA RIVEDERE...*/
+.border-radius-10 {
+    border-radius: 10px;
+}
+.transfer-button {
+    border-radius: 20px;
 }
 
 .img-cover {

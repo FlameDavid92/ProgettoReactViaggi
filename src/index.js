@@ -6,7 +6,7 @@ import Login from './components/Login/Login';
 import NoPage from './components/NoPage/NoPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
-require('typeface-roboto');
+require('typeface-roboto'); 
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,3 +20,4 @@ ReactDOM.render(
 );
 
 
+//accede al session storage se non è null ti reindirizza al path / con il componente app, altrimenti carica il componente Login, abbiamo gesito anche le route con ** indichiamo il fatto che gli altri path caricano il componente no page, per fare il routing abbiamo importato le solite cose. Session storage chiudi la tab e si perde, switch --> perche passa ai diversi path, se non matcha la prima va al resto

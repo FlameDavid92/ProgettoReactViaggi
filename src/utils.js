@@ -122,7 +122,7 @@ class Utente {
 		this.salt = salt;
 	}
 }
-export var sha512 = require('js-sha512');
+export var sha512 = require('js-sha512'); //funzione di criptazione
 export function creaUtenteDef() {
 	const utente = JSON.parse(window.localStorage.getItem('user'));
 	if (utente === null) {

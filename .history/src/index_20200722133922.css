@@ -1,4 +1,19 @@
+/* BODY E CONTAINER-FLUID MOD */
+
+body {
+    background-color: #f5f6fb;
+}
+
+.container-fluid {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 /* Variabili CSS */
+
 :root {
     --mycolor-separatore: #8898aa3a;
     --myheight-navbar: 35px;
@@ -8,86 +23,94 @@
     --mini-icon-width: 100px;
 }
 
-/* BODY E MOD CONTAINER-FLUID*/
-body {
-    background-color: #f5f6fb;
-}
-.container-fluid {
-    padding-right: 5%;
-    padding-left: 5%;
-    margin-right: auto;
-    margin-left: auto;
-}
-button.btn{
-    border-radius: 20px;
-}
-
-/*DA RIVEDERE...*/
-
 
 /* COLORI */
 
 .primary-color {
     color: rgb(245, 174, 21);
 }
+
 .secondary-color {
     color: rgb(129, 129, 129)
 }
+
 .tertiary-color {
     color: rgb(2, 102, 216);
 }
+
 .quaternary-color {
     color: rgb(207, 10, 16);
 }
+
 .mycolor-orange {
     color: rgb(245, 174, 21);
 }
+
 .mycolor-red {
     color: rgb(207, 10, 16);
 }
+
 .color-orange {
     color: rgb(245, 174, 21);
 }
+
 .mycolor-grey {
     color: rgb(129, 129, 129);
 }
+
 .color-text-grey {
     color: rgb(68, 67, 67);
 }
 
 
 /* TITOLI E TESTI */
+
 .bigTitle {
     font-size: 42px;
     font-family: 'Roboto';
 }
+
 .mediumTitle {
     font-size: 36px;
     font-family: 'Roboto';
 }
+
+
+/* c */
+
 .title {
     font-size: 24px;
     font-family: 'Roboto';
     font-weight: bold;
 }
+
 .text-small {
     font-size: 14px;
 }
+
 .subTitle {
     font-size: 20px;
 }
+
 .largeText {
     font-size: 28px;
     font-family: 'Roboto';
 }
+
 .mediumText {
     font-size: 20px;
     font-family: 'Roboto';
 }
+
 .tinyText {
     font-size: 1rem;
     font-family: 'Roboto';
 }
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
 
 /* IMMAGINI E ICONE*/
 
@@ -97,20 +120,24 @@ button.btn{
     display: block;
     object-fit: cover;
 }
+
 .medium-img {
     width: 200px;
     height: 200px;
     display: block;
     object-fit: cover;
 }
+
 .tiny-icon {
     width: 150px;
     height: auto;
 }
+
 .big-logo {
     width: 350px;
     height: auto;
 }
+
 .logo {
     width: 150px;
     height: auto;
@@ -151,6 +178,13 @@ button.btn{
         height: 40vh!important;
         width: 100%;
     }
+}
+
+
+/*DA RIVEDERE...*/
+
+.transfer-button {
+    border-radius: 20px;
 }
 
 .img-cover {

@@ -43,7 +43,7 @@ export default function NavBar({ navlinks, vizSensor }) {
                         )
                     })}
                 </ul>
-                <button onClick={logout} className="btn btn-sm btn-outline-danger btn-border-radius-10">Logout</button>
+                <button onClick={logout} className="btn btn-sm btn-outline-danger border-radius-10">Logout</button>
                 </div>
             </div>
         </nav>

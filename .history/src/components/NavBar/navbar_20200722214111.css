@@ -44,7 +44,7 @@ nav .btn{
         height: var(--myheight-navbar);
     }    
     nav .btn{
-        padding: 0.2rem !important;
+        padding: 0.1rem !important;
         font-size: 0.7rem !important;
     }
 }

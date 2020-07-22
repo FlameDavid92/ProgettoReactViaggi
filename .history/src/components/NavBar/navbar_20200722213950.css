@@ -43,8 +43,8 @@ nav .btn{
     .my-nav {
         height: var(--myheight-navbar);
     }    
-    nav .btn{
-        padding: 0.2rem !important;
-        font-size: 0.7rem !important;
+    .logout-btn{
+        padding: 0.1rem !important;
+        font-size: 0.6rem !important;
     }
 }

@@ -14,7 +14,7 @@
     height: var(--icon-height);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
     .reference-card {
         padding-left: 4vw;
         padding-right: 4vw;

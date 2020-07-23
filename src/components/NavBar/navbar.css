@@ -22,7 +22,7 @@ nav .btn{
     border-radius: 10px !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .navlogo{
         content:url("./minilogo.png");
     }
@@ -33,7 +33,7 @@ nav .btn{
         height: var(--myheight-navbar);
     } 
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 575px) {
     .navlogo{
         content:url("./minilogo.png");
     }
@@ -43,8 +43,8 @@ nav .btn{
     .my-nav {
         height: var(--myheight-navbar);
     }    
-    .logout-btn{
-        padding: 0.1rem !important;
+    nav .btn{
+        padding: 0.2rem !important;
         font-size: 0.7rem !important;
     }
 }

@@ -2,9 +2,9 @@
 import { faCar, faTaxi, faBus } from '@fortawesome/free-solid-svg-icons';
 
 export const arrayAssociativo = [];
-arrayAssociativo['auto_privata'] = { icon: faCar, classe: 'icon icon-car' };
-arrayAssociativo['transfer'] = { icon: faTaxi, classe: 'icon icon-taxi' };
-arrayAssociativo['bus'] = { icon: faBus, classe: 'icon icon-bus' };
+arrayAssociativo['auto_privata'] = { icon: faCar, classe: 'icon-car' };
+arrayAssociativo['transfer'] = { icon: faTaxi, classe: 'icon-taxi' };
+arrayAssociativo['bus'] = { icon: faBus, classe: 'icon-bus' };
 
 
 /*************************MAPPING ARRAY CITTA*****************************/
@@ -126,7 +126,7 @@ export var sha512 = require('js-sha512'); //funzione di criptazione
 export function creaUtenteDef() {
 	const utente = JSON.parse(window.localStorage.getItem('user'));
 	if (utente === null) {
-		const marco = new Utente("marcoaiello@gmail.com", sha512('aaaa' + 49), 49);
+		const marco = new Utente("marcoaiello@gmail.com", sha512('aaaaaaaa' + 49), 49);
 		window.localStorage.setItem('user', JSON.stringify(marco));
 		return marco;
 	} else {

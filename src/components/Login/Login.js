@@ -35,7 +35,7 @@ export default function Login() {
                         <input name="email" type="text" className="form-control" placeholder="Email *" required/>
                     </div>
                     <div className="form-group">
-                        <input name="password" type="password" className="form-control" placeholder="Password *" required/>
+                        <input name="password" minLength="8" type="password" className="form-control" placeholder="Password *" required/>
                     </div>
                     <div className="form-group">
                         <input type="submit" className="btnSubmit" value="Login" />

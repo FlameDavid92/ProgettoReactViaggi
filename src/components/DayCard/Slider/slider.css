@@ -34,21 +34,21 @@
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    .img-medium {
-        width: 140px;
-        height: 140px;
+@media screen and (max-width: 767px) {
+    .responsive-col {
+        display: none!important;
     }
     .img-tiny {
         width: 55px;
         height: 55px;
         object-fit: cover;
     }
-    .responsive-col {
-        display: none!important;
+    .img-medium {
+        width: 130px;
+        height: 130px;
     }
     .filter {
-        width: 140px;
+        width: 130px;
         height: 40px;
         background-color: rgba(128, 83, 91, 0.42);
         cursor: pointer;
@@ -60,7 +60,7 @@
 }
 
 
-/* @media screen and (max-width: 415px) {
+/* @media screen and (max-width: 575px) {
     .img-medium {
         width: 60px;
         height: 60px;

@@ -10,7 +10,7 @@ export default function DayCard({ primoGiorno }) {
     const contesto = React.useContext(MyContext);
     return (
         <>
-            <div className="row margin-daycard">
+            <div className="row mt-3">
                 <div className="col-12 order-md-2">
                     <MyContext.Provider value={contesto.giorno.accomodations}>
                         {(contesto.giorno.accomodations.length > 0 && <Pernottamento booleano={primoGiorno} numeroGiorni={contesto.numeroGiorni}></Pernottamento>)}

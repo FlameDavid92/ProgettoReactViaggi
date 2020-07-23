@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1050;
+    z-index: 3;
 }
 
 .modale {
@@ -15,14 +15,7 @@
     border-radius: 10px;
     margin: auto;
     background: white;
-    z-index: 1050;
-}
-
-@media screen and (max-width: 767px) {
-    .modale{
-        top: 10vh;
-        width: 85%;
-    }
+    z-index: 3;
 }
 
 .chiudi {
@@ -34,4 +27,3 @@
     background-color: rgba(199, 247, 240, 0.945);
     cursor: pointer;
 }
-

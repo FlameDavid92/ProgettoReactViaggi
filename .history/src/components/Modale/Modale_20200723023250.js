@@ -13,10 +13,9 @@ export default function Modale({ children, click }) {
         setOpened(false);
     }
     useEffect(() => {
-        if(click){
-            document.body.classList.add('modal-open');
-            setOpened(true);
-        }
+        console.log("sono quis")
+        document.body.classList.add('modal-open');
+        click && setOpened(true);
     }, [click]);
 
     return createPortal(

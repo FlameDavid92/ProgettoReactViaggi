@@ -39,14 +39,14 @@ export default function Trasferimento() {
                                         <p className='title'>{transfer.name}</p>
                                         <p className='text-capitalize'>{transfer.typology.replace('_', ' ')}</p>
                                         <FontAwesomeIcon className={"myicon-padding " + utils.arrayAssociativo[transfer.typology].classe} icon={utils.arrayAssociativo[transfer.typology].icon} />
-                                        <p className="text-small">{transfer.description} </p>
-                                        <p className="text-small">{transfer.distance + ' km'}</p>
+                                        <p>{transfer.description} </p>
+                                        <p>{transfer.distance + ' km'}</p>
                                         <div className="row">
                                             <div className="col-12">
-                                                <p>DA: <span className='text-primary text-small'>{transfer.departure.name}</span></p>
+                                                <p>DA: <span className='text-primary'>{transfer.departure.name}</span></p>
                                             </div>
                                             <div className="col-12">
-                                                <p>A: <span className='text-primary text-small'> {transfer.arrival.name} </span></p>
+                                                <p>A: <span className='text-primary'> {transfer.arrival.name} </span></p>
                                             </div>
                                         </div>
                                     </div>

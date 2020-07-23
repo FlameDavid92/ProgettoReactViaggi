@@ -9,14 +9,10 @@ export default function Modale({ children, click }) {
     const [opened, setOpened] = useState(false);
 
     const chiudiModale = () => {
-        document.body.classList.remove('modal-open');
         setOpened(false);
     }
     useEffect(() => {
-        if(click){
-            document.body.classList.add('modal-open');
-            setOpened(true);
-        }
+        click && setOpened(true);
     }, [click]);
 
     return createPortal(

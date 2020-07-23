@@ -12,7 +12,7 @@ export default function Dayline({ giorno, numeroAttivita, transports, end }) {
                 <div className="col-12 text-center">
                     <div className="row flex-column align-items-center">
                         <div className="col-10 offset-2 col-md-10 offset-md-1 mobile-padding-day">
-                            <div className="day-circle text-white dayline-icon-text">DAY <span className="text-large">{giorno}</span></div>
+                            <div className="day-circle text-white text-small">DAY <span className="text-large">{giorno}</span></div>
                         </div>
 
                         {Array(numeroAttivita).fill(null).map((att,i) => {

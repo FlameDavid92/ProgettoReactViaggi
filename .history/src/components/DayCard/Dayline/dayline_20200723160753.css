@@ -37,10 +37,6 @@
     padding: 5px;
 }
 
-.dayline-icon-text{
-    font-size: 15px;
-}
-
 @media screen and (max-width: 767px) {
     .coda-timeline {
         border-left: 4px dotted grey;
@@ -63,13 +59,8 @@
     .mobile-padding-day{
         padding: 0px !important;
     }
+
     .mobile-padding-div-icon{
         padding-left: 11px !important;
-    }
-    .activity-icon-dayline{
-        padding: 2px;
-    }
-    .dayline-icon-text{
-        font-size: 9px;
     }
 }

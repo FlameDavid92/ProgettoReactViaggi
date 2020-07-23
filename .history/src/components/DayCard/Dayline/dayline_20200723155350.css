@@ -34,11 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
 }
 
-.dayline-icon-text{
-    font-size: 15px;
+.transport-icon-padding{
+    padding: 5px;
 }
 
 @media screen and (max-width: 767px) {
@@ -58,18 +57,16 @@
     .transport-circle {
         width: 17px !important;
         height: 17px !important;
-        padding: 3px;
     }
     .mobile-padding-day{
         padding: 0px !important;
     }
-    .mobile-padding-div-icon{
+
+    .mobile-padding-icon{
         padding-left: 11px !important;
     }
-    .activity-icon-dayline{
-        padding: 2px;
-    }
-    .dayline-icon-text{
-        font-size: 9px;
+
+    .transport-icon-padding{
+        padding: 3px;
     }
 }

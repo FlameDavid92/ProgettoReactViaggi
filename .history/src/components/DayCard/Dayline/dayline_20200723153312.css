@@ -34,11 +34,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-}
-
-.dayline-icon-text{
-    font-size: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -48,8 +43,8 @@
         width: 4px;
     }
     .day-circle {
-        width: 34px !important;
-        height: 34px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
     .activity-circle {
         width: 17px !important;
@@ -58,18 +53,5 @@
     .transport-circle {
         width: 17px !important;
         height: 17px !important;
-        padding: 3px;
-    }
-    .mobile-padding-day{
-        padding: 0px !important;
-    }
-    .mobile-padding-div-icon{
-        padding-left: 11px !important;
-    }
-    .activity-icon-dayline{
-        padding: 2px;
-    }
-    .dayline-icon-text{
-        font-size: 9px;
     }
 }

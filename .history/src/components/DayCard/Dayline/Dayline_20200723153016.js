@@ -11,18 +11,18 @@ export default function Dayline({ giorno, numeroAttivita, transports, end }) {
             <div className="row h-100 justify-content-center">
                 <div className="col-12 text-center">
                     <div className="row flex-column align-items-center">
-                        <div className="col-10 offset-2 col-md-10 offset-md-1 mobile-padding-day">
-                            <div className="day-circle text-white dayline-icon-text">DAY <span className="text-large">{giorno}</span></div>
+                        <div className="col-12 text-center col-md-10 offset-md-1">
+                            <div className="day-circle text-white text-small">DAY <span className="text-large">{giorno}</span></div>
                         </div>
 
                         {Array(numeroAttivita).fill(null).map((att,i) => {
-                            return <div key={"icon-act-"+i} className='col-12 col-md-8 offset-md-2 mobile-padding-div-icon'>
-                                <div className="activity-circle"><FontAwesomeIcon className="activity-icon-dayline" icon={faMapMarker} /></div></div>
+                            return <div key={"icon-act-"+i} className='col-12 col-md-8 offset-md-2'>
+                                <div className="activity-circle"><FontAwesomeIcon icon={faMapMarker} /></div></div>
                         })}
                         {transports.map((tr,i) => {
-                            return <div key={"icon-tr-"+i} className='col-12 col-md-8 offset-md-2 mobile-padding-div-icon'>
+                            return <div key={"icon-tr-"+i} className='col-12 col-md-8 offset-md-2'>
                                 <div className="div-transport">
-                                    <FontAwesomeIcon className={arrayAssociativo[tr.typology].classe + " transport-circle"} icon={arrayAssociativo[tr.typology].icon} />
+                                    <FontAwesomeIcon className={"p-2 "+arrayAssociativo[tr.typology].classe + " transport-circle"} icon={arrayAssociativo[tr.typology].icon} />
                                 </div>
                             </div>
                         })}

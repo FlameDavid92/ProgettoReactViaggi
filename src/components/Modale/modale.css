@@ -6,12 +6,14 @@
     top: 0;
     left: 0;
     z-index: 1050;
+    /* la navbar di bootstra ha 1030 quindi dovevamo mettere piu di 1030 */
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .modale {
     position: relative;
-    top: 25vh;
-    width: 40%;
+    width: 50%;
     border-radius: 10px;
     margin: auto;
     background: white;
@@ -19,9 +21,13 @@
 }
 
 @media screen and (max-width: 767px) {
-    .modale{
-        top: 10vh;
-        width: 85%;
+    .containermodale {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 40%;
+    }
+    .modale {
+        width: 85%!important;
     }
 }
 
@@ -34,4 +40,3 @@
     background-color: rgba(199, 247, 240, 0.945);
     cursor: pointer;
 }
-

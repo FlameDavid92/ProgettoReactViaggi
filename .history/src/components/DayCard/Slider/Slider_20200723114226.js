@@ -27,7 +27,7 @@ export default function Slider({ apriModale, images }) {
                     <div style={{ backgroundImage: `url('${(images[3]) ? images[3].image : 
                 "https://via.placeholder.com/240"}')` }} className=' img-tiny text-center  cover '>
                         <div className='hoverImg d-flex flex-column ' onClick={apriModale}>
-                            <span className='my-auto length '>+{((images.length - 3) > 0) && images.length - 3}</span>
+                            <span className='my-auto length '>+{images.length - 3}</span>
                         </div>
                     </div>
                 </div>

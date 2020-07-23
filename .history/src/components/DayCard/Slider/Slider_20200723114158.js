@@ -16,7 +16,7 @@ export default function Slider({ apriModale, images }) {
                 <div className='filter text-white'>
                     <FontAwesomeIcon onClick={apriModale} icon= {faFileImage}></FontAwesomeIcon>
                 </div>
-                <img alt="immagine" className='img-medium' src={(images[1]) ? images[1].image : 
+                <img alt="immagine" className='img-medium' src={(images[9]) ? images[1].image : 
                 "https://via.placeholder.com/240"}></img>
             </div>
             
@@ -27,7 +27,7 @@ export default function Slider({ apriModale, images }) {
                     <div style={{ backgroundImage: `url('${(images[3]) ? images[3].image : 
                 "https://via.placeholder.com/240"}')` }} className=' img-tiny text-center  cover '>
                         <div className='hoverImg d-flex flex-column ' onClick={apriModale}>
-                            <span className='my-auto length '>+{((images.length - 3) > 0) && images.length - 3}</span>
+                            <span className='my-auto length '>+{images.length - 3}</span>
                         </div>
                     </div>
                 </div>

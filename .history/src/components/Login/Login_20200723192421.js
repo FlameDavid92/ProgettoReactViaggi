@@ -12,6 +12,8 @@ export default function Login() {
     const history = useHistory();
     const checkLogin = (ev) => {
         ev.preventDefault();
+        console.log("sha512 ",sha512(ev.currentTarget.password.value + utente.salt));
+        console.log("hash ",utente.hash);
         if(ev.currentTarget.email.value === utente.email && sha512(ev.currentTarget.password.value + utente.salt) === utente.hash){
             window.sessionStorage.setItem('user',JSON.stringify(utente));
             history.go("/");

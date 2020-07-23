@@ -11,6 +11,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 export default function Pernottamento({ numeroGiorni, booleano }) {
     const contesto = React.useContext(MyContext);
     const [modPernottamento, setModPernottamento] = useState(0);
+    console.log(contesto);
 
     let numeroNotti = numeroGiorni - 1;
     let titoloAccomodation = contesto[0].name + ' ' + (contesto[0].stars.includes('Lux') ? contesto[0].stars.split('_')[0] + "*L" : contesto[0].stars + '*');

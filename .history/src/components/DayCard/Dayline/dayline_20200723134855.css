@@ -1,7 +1,7 @@
 .coda-timeline {
     border-left: 10px dotted grey;
     box-sizing: border-box;
-    height: 93%;
+    height: calc(100% -130px);
     width: 10px;
 }
 
@@ -42,15 +42,16 @@
         width: 4px;
     }
     .day-circle {
-        width: 34px !important;
-        height: 34px !important;
+        width: 35px !important;
+        height: 35px !important;
     }
     .activity-circle {
-        width: 17px !important;
-        height: 17px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
     .transport-circle {
-        width: 17px !important;
-        height: 17px !important;
+        width: 20px !important;
+        height: 20px !important;
+        padding: 2px !important;
     }
 }

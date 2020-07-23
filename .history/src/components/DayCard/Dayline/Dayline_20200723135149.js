@@ -11,18 +11,18 @@ export default function Dayline({ giorno, numeroAttivita, transports, end }) {
             <div className="row h-100 justify-content-center">
                 <div className="col-12 text-center">
                     <div className="row flex-column align-items-center text-center">
-                        <div className="col-10 offset-1">
+                        <div className="col-12">
                             <div className="day-circle text-white text-small">DAY <span className="text-large">{giorno}</span></div>
                         </div>
 
                         {Array(numeroAttivita).fill(null).map((att,i) => {
-                            return <div key={"icon-act-"+i} className='col-8 offset-2'>
+                            return <div key={"icon-act-"+i} className='col-12 text-center'>
                                 <div className="activity-circle"><FontAwesomeIcon icon={faMapMarker} /></div></div>
                         })}
                         {transports.map((tr,i) => {
-                            return <div key={"icon-tr-"+i} className='col-8 offset-2'>
+                            return <div key={"icon-tr-"+i} className='col-12 text-center'>
                                 <div className="div-transport">
-                                    <FontAwesomeIcon className={"p-2 "+arrayAssociativo[tr.typology].classe + " transport-circle"} icon={arrayAssociativo[tr.typology].icon} />
+                                    <FontAwesomeIcon className={arrayAssociativo[tr.typology].classe + " transport-circle"} icon={arrayAssociativo[tr.typology].icon} />
                                 </div>
                             </div>
                         })}

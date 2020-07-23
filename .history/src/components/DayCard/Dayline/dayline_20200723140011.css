@@ -52,5 +52,6 @@
     .transport-circle {
         width: 17px !important;
         height: 17px !important;
+        padding: 2px !important;
     }
 }

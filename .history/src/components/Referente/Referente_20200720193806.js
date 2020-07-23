@@ -13,23 +13,23 @@ export default function Referente() {
                         <div className="col-5 col-xl-4">
                             <img
                                 alt="immagine"
-                                className="operator-img"
+                                className="tiny-img"
                                 src={contesto.operator.image}
                             ></img>
                         </div>
                         <div className="col-7 col-xl-7">
                             <div className="row h-100">
                                 <div className="col-12">
-                                    <span className="text-small">
+                                    <span className="tinyText">
                                         Il tuo referente è{" "}
                                         <span className="mycolor-orange">{contesto.operator.name}</span></span>
                                 </div>
                                 <div className="col-12 mt-auto">
-                                    <span className="text-small">
+                                    <span className="tinyText">
                                         Tel: <a href={`tel: ${contesto.operator.contact.phone}`} >{contesto.operator.contact.phone}</a>
                                     </span>
                                         <br />
-                                        <span className="text-small">
+                                        <span className="tinyText">
                                             Email: <a href={`mailto: ${contesto.operator.contact.email}`} target="_blank" rel="noopener noreferrer">{contesto.operator.contact.email}</a>
                                         </span>
                                 </div>
@@ -41,10 +41,10 @@ export default function Referente() {
                 <div className="col-12 col-xl-5 offset-xl-1 agency-info">
                     <div className="row h-100">
                         <div className="col-12">
-                            <img alt="immagine" className="agency-img" src={iconaAzienda}></img>
+                            <img alt="immagine" className="tiny-icon" src={iconaAzienda}></img>
                         </div>
                         <div className="col-12 mt-auto">
-                            <span className="text-small">
+                            <span className="tinyText">
                                 {contesto.agency.name}
                                 <br />
                                 {contesto.agency.contact.address}

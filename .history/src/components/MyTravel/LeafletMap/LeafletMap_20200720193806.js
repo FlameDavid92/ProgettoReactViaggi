@@ -56,7 +56,7 @@ export default function LeafletMap() {
       {
         contesto.citta.map((citta,i) => 
           <Marker key={"marker-"+i} position={[citta.posizione.latitudine, citta.posizione.longitudine]}>
-            <Popup><p className="text-small text-center">{citta.nome}</p></Popup>
+            <Popup><p className="tinyText text-center">{citta.nome}</p></Popup>
           </Marker>
         )
       }

@@ -107,7 +107,14 @@ button.btn{
     display: block;
     object-fit: cover;
 }
-.agency-img {
+
+/**/
+
+.tiny-icon {
+    width: 150px;
+    height: auto;
+}
+.logo {
     width: 150px;
     height: auto;
 }
@@ -149,7 +156,14 @@ button.btn{
         width: 100px;
         height: 100px;
     }
+
     .nomobile {
         display: none;
+    }
+
+    /**/
+
+    .logo {
+        width: 100px;
     }
 }

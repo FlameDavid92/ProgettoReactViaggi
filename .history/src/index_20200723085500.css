@@ -101,13 +101,28 @@ button.btn{
     color: #f73761
 }
 
-.operator-img {
+/**/
+.tiny-img {
     width: var(--icon-width);
     height: var(--icon-height);
     display: block;
     object-fit: cover;
 }
-.agency-img {
+.medium-img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+.tiny-icon {
+    width: 150px;
+    height: auto;
+}
+.big-logo {
+    width: 350px;
+    height: auto;
+}
+.logo {
     width: 150px;
     height: auto;
 }
@@ -145,11 +160,20 @@ button.btn{
         width: 100px !important;
         padding: 10px !important;
     }
-    .operator-img {
-        width: 100px;
-        height: 100px;
-    }
+
     .nomobile {
         display: none;
+    }
+    
+    
+    .big-logo {
+        width: 250px;
+    }
+    .logo {
+        width: 100px;
+    }
+    .tiny-img {
+        width: 100px;
+        height: 100px;
     }
 }

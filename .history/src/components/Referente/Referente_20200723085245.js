@@ -13,7 +13,7 @@ export default function Referente() {
                         <div className="col-5 col-xl-4">
                             <img
                                 alt="immagine"
-                                className="operator-img"
+                                className="tiny-img"
                                 src={contesto.operator.image}
                             ></img>
                         </div>
@@ -41,7 +41,7 @@ export default function Referente() {
                 <div className="col-12 col-xl-5 offset-xl-1 agency-info">
                     <div className="row h-100">
                         <div className="col-12">
-                            <img alt="immagine" className="agency-img" src={iconaAzienda}></img>
+                            <img alt="immagine" className="tiny-icon" src={iconaAzienda}></img>
                         </div>
                         <div className="col-12 mt-auto">
                             <span className="text-small">

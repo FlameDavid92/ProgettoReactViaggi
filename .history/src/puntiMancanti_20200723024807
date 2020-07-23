@@ -6,4 +6,13 @@
 5-Dayline centrata
 6-Margini DayCard
 7-risolvere Warning
-8-implementazione DB e Login reale.
+
+
+DayCard			    JS:ok
+Presentazione		JS:ok CSS:ok
+CheckInclude		JS:ok CSS:ok
+
+
+Tariffa			    JS:ok
+Note			    JS:ok
+OnlyDescription		JS:ok

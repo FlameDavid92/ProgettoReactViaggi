@@ -40,7 +40,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                         <div class="col-12 my-1">
 
                                             <h1 className='title'>{acc.typology} {Array(numeroStelle).fill(null).map((icon, i) => {
-                                                return <FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
+                                                return " "+<FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
                                             })}{(numeroStelle === 5 && acc.stars.length > 1) && 'L'} </h1>
                                             <div class="row">
                                                 {acc.images.map((ele, i) => {
@@ -51,14 +51,14 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
 
                                                 })}
                                             </div>
-                                            <p className="text-small">{acc.description}
+                                            <p>{acc.description}
                                             </p>
-                                            <p className="text-small">{acc.descriptionRestaurant}</p>
-                                            <p className="text-small">{acc.descriptionRooms}</p>
-                                            <p className="text-small">{acc.descriptionServices}</p>
-                                            <p className="text-small">{acc.position}</p>
-                                            <p className="text-small">{acc.contact.address}</p>
-                                            <p className="text-small">{acc.contact.website}</p>
+                                            <p>{acc.descriptionRestaurant}</p>
+                                            <p>{acc.descriptionRooms}</p>
+                                            <p>{acc.descriptionServices}</p>
+                                            <p>{acc.position}</p>
+                                            <p>{acc.contact.address}</p>
+                                            <p>{acc.contact.website}</p>
                                         </div>
                                     </div>
                                     <div class="modale__description my-2">

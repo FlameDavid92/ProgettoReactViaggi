@@ -7,6 +7,8 @@
     left: 0;
     z-index: 1050;
     /* la navbar di bootstra ha 1030 quindi dovevamo mettere piu di 1030 */
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .modale {

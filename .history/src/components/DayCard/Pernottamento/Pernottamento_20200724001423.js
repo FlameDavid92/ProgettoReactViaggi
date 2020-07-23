@@ -34,12 +34,11 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                 <Link className="d-inline" to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link>
                             </p>
                             <Modale title={acc.name} click={modPernottamento}>
-
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-12 my-1">
 
-                                            <h1 className='title'>{acc.typology} {Array(numeroStelle).fill(null).map((icon, i) => {
+                                            <h1 className='title'>{acc.name} {Array(numeroStelle).fill(null).map((icon, i) => {
                                                 return <FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
                                             })}{(numeroStelle === 5 && acc.stars.length > 1) && 'L'} </h1>
                                             <div class="row">
@@ -51,14 +50,14 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
 
                                                 })}
                                             </div>
-                                            <p className="text-small">{acc.description}
+                                            <p>{acc.description}
                                             </p>
-                                            <p className="text-small">{acc.descriptionRestaurant}</p>
-                                            <p className="text-small">{acc.descriptionRooms}</p>
-                                            <p className="text-small">{acc.descriptionServices}</p>
-                                            <p className="text-small">{acc.position}</p>
-                                            <p className="text-small">{acc.contact.address}</p>
-                                            <p className="text-small">{acc.contact.website}</p>
+                                            <p>{acc.descriptionRestaurant}</p>
+                                            <p>{acc.descriptionRooms}</p>
+                                            <p>{acc.descriptionServices}</p>
+                                            <p>{acc.position}</p>
+                                            <p>{acc.contact.address}</p>
+                                            <p>{acc.contact.website}</p>
                                         </div>
                                     </div>
                                     <div class="modale__description my-2">

@@ -25,7 +25,7 @@ export default function Attivita() {
                             <p><span className='taglia-testo color-text-grey text-small mt-2'> {act.description}</span>
                                 <Link to="" onClick={() => utils.funzioneApriModale(setModAttivita, modAttivita)}>Scopri di più</Link>
                             </p>
-                            <Modale title={act.name} click={modAttivita}>
+                            <Modale title={} click={modAttivita}>
                                 <div className="row">
                                     {act.images.map((ele, i) => {
                                         return (<div className="col-4 ">

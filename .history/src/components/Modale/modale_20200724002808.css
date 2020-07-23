@@ -7,13 +7,15 @@
     left: 0;
     z-index: 1050;
     /* la navbar di bootstra ha 1030 quindi dovevamo mettere piu di 1030 */
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
 }
 
 .modale {
     position: relative;
     border-radius: 10px;
-    width: 50%;
-    margin: 0 auto;
+    margin: auto;
     background: white;
     z-index: 1050;
 }

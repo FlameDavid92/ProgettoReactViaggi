@@ -29,7 +29,7 @@ export default function Modale({ children, title, click }) {
                         </div>
                         <div onClick={chiudiModale} className="col-2">
                             <div className="chiudi text-center text-primary shadow">
-                                <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon> <span className="nomobile">Close</span>
+                                <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon> Close
                             </div>
                         </div>
                     </div>

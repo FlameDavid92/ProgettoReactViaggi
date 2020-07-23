@@ -27,11 +27,9 @@ export default function Modale({ children, title, click }) {
                         <div className="col-10">
                             <div className="title text-uppercase">{title}</div>
                         </div>
-                        <div onClick={chiudiModale} className="col-2">
-                            <div className="chiudi text-center text-primary shadow">
-                                <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon> <span className="nomobile">Close</span>
+                        <div onClick={chiudiModale} className="chiudi col-2 p-1 text-center shadow text-primary">
+                            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon> Close
                             </div>
-                        </div>
                     </div>
                     <div className="row m-0">
                         <div className="separatore"></div>

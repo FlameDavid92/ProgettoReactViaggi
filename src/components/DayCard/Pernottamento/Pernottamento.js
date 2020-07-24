@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import * as utils from '../../../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import ScrollingImg from '../ScrollingImg/ScrollingImg'
 
 export default function Pernottamento({ numeroGiorni, booleano }) {
     const contesto = React.useContext(MyContext);
@@ -32,7 +33,9 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                 <Link className="d-inline" to="" onClick={() => utils.funzioneApriModale(setModPernottamento, modPernottamento)}>Scopri di più</Link>
                             </p>
                             <Modale title={acc.name} click={modPernottamento}>
-
+                                <MyContext.Provider value={acc.images}>
+                                    <ScrollingImg></ScrollingImg>
+                                </MyContext.Provider>
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-12 mb-1">
@@ -40,15 +43,6 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                             <h1 className='title'>{acc.typology} {Array(numeroStelle).fill(null).map((icon, i) => {
                                                 return <FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
                                             })}{(numeroStelle === 5 && acc.stars.length > 1) && 'L'} </h1>
-                                            <div className="row">
-                                                {acc.images.map((ele, i) => {
-
-                                                    return (<div key={'imgModalePernottamento-' + i} className="col-6 col-md-4">
-                                                        <img src={ele.image} alt="modal" className={'img-modale '+((i>3)&&"nomobile")} />
-                                                    </div>)
-
-                                                })}
-                                            </div>
                                             <p className="text-small">{acc.description}
                                             </p>
                                             <p className="text-small">{acc.descriptionRestaurant}</p>

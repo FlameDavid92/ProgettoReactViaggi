@@ -23,7 +23,7 @@ export default function Modale({ children, title, click }) {
         opened ? (
             <div className="containermodale">
                 <div className="modale shadow mt-3">
-                    <div className="row justify-content-between m-0 p-2">
+                    <div className="row justify-content-between w-100 m-0 p-2">
                         <div className="col-10">
                             <div className="title text-uppercase">{title}</div>
                         </div>
@@ -33,7 +33,7 @@ export default function Modale({ children, title, click }) {
                             </div>
                         </div>
                     </div>
-                    <div className="row m-0">
+                    <div className="row w-100 m-0">
                         <div className="separatore mb-2"></div>
                         {children}
                     </div>

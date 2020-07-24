@@ -6,16 +6,17 @@
     text-align: center;
     position: absolute;
     width: 100%;
+    margin-top: 50px;
 }
 
 @media screen and (max-height: 640px) {
-    .footer{
+    .footer {
         margin-top: 30px;
     }
 }
 
 @media screen and (max-height: 736px) {
-    .footer{
+    .footer {
         margin-top: 130px;
     }
 }

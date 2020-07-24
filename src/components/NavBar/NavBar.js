@@ -18,9 +18,9 @@ export default function NavBar({ navlinks }) {
                     <div className="navbar-nav mr-auto">
                         {navlinks.map((link, i) => {
                             return (
-                                <Link key={"link-" + i} activeClass="active" className={"nav-link " + ((link.id === "header") ? "d-none" : "")} to={link.id} 
-                                offset={(link.id==='mappa') ? (navheight*-1)+3 : (navheight*-1) } 
-                                spy={true} hashSpy={true}  isDynamic={true} duration={200} >
+                                <Link key={"link-" + i} activeClass="active" className={"nav-link " + ((link.id === "header") ? "d-none" : "")} to={link.id}
+                                    offset={(link.id === 'mappa') ? (navheight * -1) + 3 : (navheight * -1)}
+                                    spy={true} hashSpy={true} isDynamic={true} duration={200} >
                                     <span className="font-link link-hover">{link.nome}</span>
                                 </Link>
                             )

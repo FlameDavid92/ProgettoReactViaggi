@@ -74,7 +74,7 @@ button.btn{
 }
 
 .text-tiny{
-    font-size: 12px;
+    font-size: 10px;
     font-family: 'Roboto';
 }
 
@@ -152,7 +152,7 @@ button.btn{
         font-size: 14px;
     }
     .text-tiny{
-        font-size: 10px;
+        font-size: 8px;
     }
     .text-small{
         font-size: 12px;

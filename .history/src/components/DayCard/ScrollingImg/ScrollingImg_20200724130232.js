@@ -32,8 +32,8 @@ function ScrollingImg() {
 	}
 	return (
 		<>
-			<div className="row w-100 mx-0 mt-1 mb-1">
-				<div className="col-10 offset-1 p-0">
+			<div className="row w-100 mt-1 mb-1">
+				<div className="col-10 offset-1 ">
 					<div className="img-scroller d-flex" style={{ backgroundImage: `url(${contesto[indexCurrent].image}` }}>
 						<div id='left' className=" mr-auto my-auto " onClick={changeImg}>
 							<FontAwesomeIcon className=" arrow" icon={faArrowLeft} />
@@ -47,18 +47,19 @@ function ScrollingImg() {
 
 			</div>
 			{<div className="row w-100 m-0">
-				<div className="col-10 offset-1 riga-miniatures mb-1">
-					{
-						contesto.map((ele, i) => {
-							return (<div key={i}>
-								<img className={`miniatura ${((i === 0) && 'ml-0 ')} ${((indexCurrent === i) && 'border-selected')}`}
-									onClick={() => setIndexCurrent(i)} src={ele.image} alt='img'></img>
-							</div>)
-						})
-					}
-				</div>
+				
 
+					<div className="col-12 w-100 riga-miniatures mb-1">
+						{
+							contesto.map((ele, i) => {
+								return (<div key={i}>
+									<img className={'miniatura '+((indexCurrent ===i)?'border-selected':' ' )} onClick={()=>setIndexCurrent(i)} src={ele.image} alt='img'></img>
+								</div>)
+							})
+						}
+					</div>
 
+				
 			</div>}
 		</>
 	)

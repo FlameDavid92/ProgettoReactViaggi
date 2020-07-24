@@ -43,13 +43,13 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                             <h1 className='title'>{acc.typology} {Array(numeroStelle).fill(null).map((icon, i) => {
                                                 return <FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
                                             })}{(numeroStelle === 5 && acc.stars.length > 1) && 'L'} </h1>
-                                            <p className="text-tiny mb-1">
+                                            <p className="text-tiny m-0">
                                                 {acc.description}<br/>
                                                 {acc.descriptionRestaurant}
                                                 {acc.descriptionRooms}
                                                 {acc.descriptionServices}
                                             </p>
-                                            <p className="text-small m-0">Indirizzo: {acc.contact.address}<br/>
+                                            <p className="text-small">Indirizzo: {acc.contact.address}<br/>
                                             Sito web: <a target="_blank" rel="noopener noreferrer" href={"https://"+acc.contact.website}> {acc.contact.website}</a>
                                             </p>
                                         </div>

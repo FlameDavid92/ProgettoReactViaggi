@@ -15,9 +15,9 @@
 
 .img-scroller {
     width: 100%;
-    height: 270px;
-    background-repeat:no-repeat;
-    background-position: center center;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: relative;
     background-size: cover;
 }
 
@@ -27,7 +27,7 @@
     height: 80px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 15px;
+    margin: 20px;
 }
 
 .miniatura:hover {

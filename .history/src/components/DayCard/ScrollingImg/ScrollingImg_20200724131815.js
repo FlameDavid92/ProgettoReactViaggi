@@ -51,7 +51,9 @@ function ScrollingImg() {
 					{
 						contesto.map((ele, i) => {
 							return (<div key={i}>
-								<img className={`miniatura ${((i === 0) && 'ml-0 ')} ${((indexCurrent === i) && 'border-selected')}`}
+								<img className={'miniatura '
+									+ (((indexCurrent === i) ? 'border-selected' : ' ')
+								+ ((i === 0) && 'ml-0 '))}
 									onClick={() => setIndexCurrent(i)} src={ele.image} alt='img'></img>
 							</div>)
 						})

@@ -15,19 +15,19 @@
 
 .img-scroller {
     width: 100%;
-    height: 270px;
-    background-repeat:no-repeat;
-    background-position: center center;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: relative;
     background-size: cover;
 }
 
 .miniatura {
     flex-shrink: 0;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 15px;
+    margin: 20px;
 }
 
 .miniatura:hover {

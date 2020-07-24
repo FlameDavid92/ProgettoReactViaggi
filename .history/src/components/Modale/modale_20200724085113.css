@@ -21,7 +21,8 @@
 
 @media screen and (max-width: 767px) {
     .containermodale {
-        padding-top: 5%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .modale {
         width: 85%!important;

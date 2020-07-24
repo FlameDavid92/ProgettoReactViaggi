@@ -4,6 +4,7 @@ import Slider from '../Slider/Slider';
 import Modale from '../../Modale/Modale';
 import { Link } from 'react-router-dom';
 import * as utils from '../../../utils';
+import './pernottamento.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
@@ -44,7 +45,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                                 {acc.images.map((ele, i) => {
 
                                                     return (<div key={'imgModalePernottamento-' + i} className="col-6 col-md-4">
-                                                        <img src={ele.image} alt="modal" className={'img-modale '+((i>3)&&"nomobile")} />
+                                                        <img src={ele.image} alt="modal" className={'img-modale '+(i>3)&&"nomobile"} />
                                                     </div>)
 
                                                 })}
@@ -54,6 +55,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                             <p className="text-small">{acc.descriptionRestaurant}</p>
                                             <p className="text-small">{acc.descriptionRooms}</p>
                                             <p className="text-small">{acc.descriptionServices}</p>
+                                            <p className="text-small">{acc.position}</p>
                                             <p className="text-small">{acc.contact.address}</p>
                                             <p className="text-small">{acc.contact.website}</p>
                                         </div>

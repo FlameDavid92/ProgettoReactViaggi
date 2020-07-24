@@ -34,8 +34,8 @@ export default function Trasferimento() {
                             </div>
 
                             <Modale title={transfer.name} click={modTrasferimento}>
-                                <div className="row mb-0">
-                                    <div className="col-10 offset-1">
+                                <div className="row">
+                                    <div className="col-12">
                                         <p className='text-capitalize'>{transfer.typology.replace('_', ' ')}</p>
                                         <FontAwesomeIcon className={"myicon-padding " + utils.arrayAssociativo[transfer.typology].classe} icon={utils.arrayAssociativo[transfer.typology].icon} />
                                         <p className="text-small">{transfer.description} </p>

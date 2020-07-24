@@ -4,6 +4,7 @@ import Slider from '../Slider/Slider';
 import Modale from '../../Modale/Modale';
 import { Link } from 'react-router-dom';
 import * as utils from '../../../utils';
+import './pernottamento.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
@@ -54,6 +55,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                             <p className="text-small">{acc.descriptionRestaurant}</p>
                                             <p className="text-small">{acc.descriptionRooms}</p>
                                             <p className="text-small">{acc.descriptionServices}</p>
+                                            <p className="text-small">{acc.position}</p>
                                             <p className="text-small">{acc.contact.address}</p>
                                             <p className="text-small">{acc.contact.website}</p>
                                         </div>

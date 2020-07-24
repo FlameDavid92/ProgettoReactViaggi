@@ -54,6 +54,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                             <p className="text-small">{acc.descriptionRestaurant}</p>
                                             <p className="text-small">{acc.descriptionRooms}</p>
                                             <p className="text-small">{acc.descriptionServices}</p>
+                                            <p className="text-small">{acc.position}</p>
                                             <p className="text-small">{acc.contact.address}</p>
                                             <p className="text-small">{acc.contact.website}</p>
                                         </div>

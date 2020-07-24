@@ -33,13 +33,11 @@ export default function Attivita() {
                                         )
                                     })}
                                 </div>
-                                <div className="row m-0 mt-2">
+                                <div className="row">
                                     <div className="col-12">
                                         <p className='color-text-grey text-small '>{act.description}</p>
-                                        <p className='color-text-grey text-small '>
-                                            Tel: <a href={`tel: ${act.contact.phone}`} >{act.contact.phone}</a></p>
-                                        <p className='color-text-grey text-small '>
-                                            Email: <a href={`mailto: ${act.contact.email}`} target="_blank" rel="noopener noreferrer">{act.contact.email}</a></p>
+                                        <p className='color-text-grey text-small '>{act.contact.phone}</p>
+                                        <p className='color-text-grey text-small '>{act.contact.email}</p>
                                     </div>
                                 </div>
                             </Modale>

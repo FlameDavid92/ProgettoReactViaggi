@@ -33,7 +33,7 @@ export default function Attivita() {
                                         )
                                     })}
                                 </div>
-                                <div className="row m-0 mt-2">
+                                <div className="row m-0">
                                     <div className="col-12">
                                         <p className='color-text-grey text-small '>{act.description}</p>
                                         <p className='color-text-grey text-small '>

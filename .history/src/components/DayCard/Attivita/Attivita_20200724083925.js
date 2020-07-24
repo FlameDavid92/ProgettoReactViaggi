@@ -25,21 +25,17 @@ export default function Attivita() {
                                 <Link to="" onClick={() => utils.funzioneApriModale(setModAttivita, modAttivita)}>Scopri di più</Link>
                             </p>
                             <Modale title={act.name} click={modAttivita}>
-                                <div className="row w-100 m-0">
+                                <div className="row text-center">
                                     {act.images.map((ele, i) => {
                                         return (<div key={'act-'+i} className="col-6 ">
-                                            <img className="img-fluid" key={i} alt='img' src={ele.image}></img>
+                                            <img className="img-modale" key={i} alt='img' src={ele.image}></img>
                                         </div>
                                         )
                                     })}
                                 </div>
-                                <div className="row m-0 mt-2">
+                                <div className="row">
                                     <div className="col-12">
-                                        <p className='color-text-grey text-small '>{act.description}</p>
-                                        <p className='color-text-grey text-small '>
-                                            Tel: <a href={`tel: ${act.contact.phone}`} >{act.contact.phone}</a></p>
-                                        <p className='color-text-grey text-small '>
-                                            Email: <a href={`mailto: ${act.contact.email}`} target="_blank" rel="noopener noreferrer">{act.contact.email}</a></p>
+                                        <p className='text-center  m-2 color-text-grey text-small '>{act.description}</p>
                                     </div>
                                 </div>
                             </Modale>

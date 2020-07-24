@@ -46,7 +46,7 @@ function ScrollingImg() {
 				</div>
 
 			</div>
-			<div className="row w-100 m-0 nomobile">
+			{<div className="row w-100 m-0">
 				<div className="col-10 offset-1 riga-miniatures mb-1">
 					{
 						contesto.map((ele, i) => {
@@ -57,7 +57,9 @@ function ScrollingImg() {
 						})
 					}
 				</div>
-			</div>
+
+
+			</div>}
 		</>
 	)
 }

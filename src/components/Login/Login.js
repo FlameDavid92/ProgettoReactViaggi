@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { creaUtenteDef, sha512 } from '../../utils';
+import { creaUtenteDef, sha512, utentiDatabase } from '../../utils';
 import './login.css';
 import { useHistory } from "react-router-dom";
 
@@ -7,7 +7,17 @@ import { useHistory } from "react-router-dom";
 
 export default function Login() {
 //ti fa loggare se matchi nel session storage
-    const utente = creaUtenteDef();
+    const [utenti, setUtenti] = useState([]);
+
+    useEffect( () => {
+        const getUtenti = async () => {
+			setUtenti(await fetch('http://treeact.altervista.org/api.php').then((utent)=> utent.json()))
+			
+		}
+		getUtenti();
+        
+    },[])
+
     const[noval,setNoval] = useState(false);
     const history = useHistory();
     const checkLogin = (ev) => {

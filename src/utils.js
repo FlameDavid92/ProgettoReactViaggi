@@ -123,16 +123,17 @@ class Utente {
 	}
 }
 export var sha512 = require('js-sha512'); //funzione di criptazione
-export function creaUtenteDef() {
-	const utente = JSON.parse(window.localStorage.getItem('user'));
+
+/* 	const utente = JSON.parse(window.localStorage.getItem('user'));
 	if (utente === null) {
 		const marco = new Utente("marcoaiello@gmail.com", sha512('aaaaaaaa' + 49), 49);
 		window.localStorage.setItem('user', JSON.stringify(marco));
 		return marco;
 	} else {
 		return utente;
-	}
-}
+	} */
+
+
 
 export function setCssVhVariable() {
 	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit

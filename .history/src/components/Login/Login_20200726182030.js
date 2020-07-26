@@ -18,6 +18,7 @@ export default function Login() {
         } else {
             const hashToCheck = sha512(clPassword + dbSalt.salt);
             const dbCheck = await postData("http://treeact.altervista.org/checklogin45672819563.php", { email: `${clEmail}`, hashcode: `${hashToCheck}` });
+            console.log(dbCheck);
             if (dbCheck.errore) {
                 setNoval(true); //password errata
             } else{

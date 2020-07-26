@@ -10,6 +10,24 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/minilogo.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>AgenziaViaggi</title>
+  <script>
+    async function postData(url = '', data = {}) {
+      var fd = new FormData();
+      for (var i in data) {
+        fd.append(i, data[i]);
+      }
+      const response = await fetch(url, {
+        method: 'POST',
+        body: fd
+      });
+      return response.json();
+    }
+    
+    const email = JSON.parse(window.sessionStorage.getItem('email'));
+    if (email !== null) {
+
+    }
+  </script>
 </head>
 
 <body>

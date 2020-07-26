@@ -6,7 +6,7 @@ import Login from './components/Login/Login';
 import NoPage from './components/NoPage/NoPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
-require('typeface-roboto');
+require('typeface-roboto'); 
 
 ReactDOM.render(
   <>

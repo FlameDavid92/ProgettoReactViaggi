@@ -3,6 +3,8 @@ import './login.css';
 import { useHistory } from "react-router-dom";
 import sha512 from 'js-sha512';
 
+
+
 export default function Login() {
     //ti fa loggare se matchi nel session storage
     //const utente = creaUtenteDef();
@@ -22,10 +24,15 @@ export default function Login() {
             console.log(dbCheck.hashcode);
             if (dbCheck.errore) {
                 setNoval(true); //password errata
-            } else{
-                window.sessionStorage.setItem('email', JSON.stringify(clEmail));
-                history.go("/");
             }
+            /*
+            if (ev.currentTarget.email.value === utente.email && sha512(ev.currentTarget.password.value + utente.salt) === utente.hash) {
+                window.sessionStorage.setItem('user', JSON.stringify(utente));
+                history.go("/");
+            } else {
+                setNoval(true)
+                ev.currentTarget.reset();
+            }*/
         }
     }
 

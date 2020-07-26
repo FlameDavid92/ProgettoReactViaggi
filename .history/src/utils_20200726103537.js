@@ -114,9 +114,41 @@ export function funzioneApriModale(funzioneSet, parametro) {
 	funzioneSet(parametro + 1);
 }
 
+/*************************CREAZIONE UTENTE DEFAULT*****************************/
+class Utente {
+	constructor(email, hash, salt) {
+		this.email = email;
+		this.hash = hash;
+		this.salt = salt;
+	}
+}
+export var sha512 = require('js-sha512'); //funzione di criptazione
+export function creaUtenteDef() {
+	const utente = JSON.parse(window.localStorage.getItem('user'));
+	if (utente === null) {
+		const marco = new Utente("marcoaiello@gmail.com", sha512('aaaaaaaa' + 49), 49);
+		window.localStorage.setItem('user', JSON.stringify(marco));
+		return marco;
+	} else {
+		return utente;
+	}
+}
+
 export function setCssVhVariable() {
 	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 	let vh = window.innerHeight * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+function getRandomIntInclusive(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min; //Il max è incluso e il min è incluso 
+}
+
+function creaHashSalted(password) {
+	const salt = getRandomIntInclusive(1,50);
+	const hash = sha512(password+salt);
+	return "hash: "+hash+" salt: "+salt;
 }

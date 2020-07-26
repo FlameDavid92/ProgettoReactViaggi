@@ -7,7 +7,7 @@ export default function NavBar({ navlinks }) {
     const navheight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--myheight-navbar'));
     const history = useHistory();
     const logout = () => {
-        window.sessionStorage.removeItem('email');
+        window.sessionStorage.removeItem('item');
         history.go("/");
     }
     return (

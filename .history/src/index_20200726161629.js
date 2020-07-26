@@ -6,17 +6,16 @@ import Login from './components/Login/Login';
 import NoPage from './components/NoPage/NoPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
-require('typeface-roboto');
+require('typeface-roboto'); 
 
 ReactDOM.render(
-  <>
   <BrowserRouter>
     <Switch>
       {(JSON.parse(window.sessionStorage.getItem('email')) !== null) ? (<Route exact path="/" component={App}/>)
       :(<Route exact path="/" component={Login}/>)}
       <Route path="**" component={NoPage}/>
     </Switch>
-  </BrowserRouter></>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

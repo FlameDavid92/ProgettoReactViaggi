@@ -1,32 +1,38 @@
 import React, { useState } from 'react';
+import { creaUtenteDef, sha512 } from '../../utils';
 import './login.css';
 import { useHistory } from "react-router-dom";
-import sha512 from 'js-sha512';
+require('js-sha512');
+
+
 
 export default function Login() {
     //ti fa loggare se matchi nel session storage
-    //const utente = creaUtenteDef();
+    const utente = creaUtenteDef();
     const [noval, setNoval] = useState(false);
     const history = useHistory();
     const checkLogin = async (ev) => {
         ev.preventDefault();
+        ev.persist();
         const clPassword = ev.target.password.value;
         const clEmail = ev.target.email.value;
         const dbSalt = await postData("http://treeact.altervista.org/richiestasalt1357986420.php", { email: `${clEmail}` });
-        if (dbSalt.errore) { //se è presente la chiave errore (quindi non è undefined) vuol dire che nel db non è presente l'utente con l'email richiesta.
-            setNoval(true); //email non presente
-        } else {
-            const hashToCheck = sha512(clPassword + dbSalt.salt);
-            console.log(hashToCheck);
-            const dbCheck = await postData("http://treeact.altervista.org/checklogin45672819563.php", { email: `${clEmail}`, hashcode: `${hashToCheck}` });
-            console.log(dbCheck.hashcode);
-            if (dbCheck.errore) {
-                setNoval(true); //password errata
-            } else{
-                window.sessionStorage.setItem('email', JSON.stringify(clEmail));
-                history.go("/");
-            }
+        if(dbSalt.errore){ //se è presente la chiave errore (quindi non è undefined) vuol dire che nel db non è presente l'utente con l'email richiesta.
+            setNoval(true);
         }
+
+        /*
+        const hashToCheck = sha512(clPassword + dbSalt.salt);
+        const jsonino = await postData("http://treeact.altervista.org/checklogin45672819563.php", { email: `${clEmail}`, hashcode: `${hashToCheck}` });
+        console.log(jsonino);*/
+        /*
+        if (ev.currentTarget.email.value === utente.email && sha512(ev.currentTarget.password.value + utente.salt) === utente.hash) {
+            window.sessionStorage.setItem('user', JSON.stringify(utente));
+            history.go("/");
+        } else {
+            setNoval(true)
+            ev.currentTarget.reset();
+        }*/
     }
 
     async function postData(url = '', data = {}) {

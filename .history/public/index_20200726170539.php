@@ -10,6 +10,11 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/minilogo.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>AgenziaViaggi</title>
+  <script>
+    if(<?php echo isset($_SESSION['logged']) ? true : false; ?>){
+      console.log("ok");
+    }
+  </script>
 </head>
 
 <body>

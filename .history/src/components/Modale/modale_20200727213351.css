@@ -19,11 +19,6 @@
     padding: 5px;
 }
 
-.modal-children{
-    max-height: 80vh;
-    overflow-y: scroll;
-}
-
 @media screen and (max-width: 767px) {
     .containermodale {
         padding-top: 5%;

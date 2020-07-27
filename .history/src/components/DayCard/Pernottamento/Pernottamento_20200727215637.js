@@ -38,12 +38,12 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                 </MyContext.Provider>
                                 <div className="container">
                                     <div className="row">
-                                        <div className="col-10 offset-1">
+                                        <div className="col-10 offset-1 mb-1">
                                             <h1 className='title'>{acc.typology} {Array(numeroStelle).fill(null).map((icon, i) => {
                                                 return <FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
                                             })}{(numeroStelle === 5 && acc.stars.length > 1) && 'L'} </h1>
-                                            <div>
-                                                <p className="text-small mb-1">
+                                            <div style={{overflowY: scroll}}>
+                                                <p className="text-tiny mb-1">
                                                     {acc.description}<br />
                                                     {acc.descriptionRestaurant}
                                                     {acc.descriptionRooms}
@@ -55,7 +55,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="modale__description my-2">
+                                    <div class="modale__description my-2">
                                     </div>
                                 </div>
                             </Modale>

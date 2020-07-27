@@ -43,7 +43,7 @@ export default function Pernottamento({ numeroGiorni, booleano }) {
                                                 return <FontAwesomeIcon key={'stella-' + i} icon={faStar}></FontAwesomeIcon>
                                             })}{(numeroStelle === 5 && acc.stars.length > 1) && 'L'} </h1>
                                             <div>
-                                                <p className="text-small mb-1">
+                                                <p className="text-tiny mb-1">
                                                     {acc.description}<br />
                                                     {acc.descriptionRestaurant}
                                                     {acc.descriptionRooms}

@@ -20,8 +20,8 @@
 }
 
 .modal-children{
-    max-height: 80vh;
-    overflow-y: scroll;
+    height: 80vh;
+    overflow-y: hidden;
 }
 
 @media screen and (max-width: 767px) {

@@ -13,6 +13,7 @@
     position: relative;
     border-radius: 10px;
     width: 50%;
+    height: 80vh;
     margin: 0 auto;
     background: white;
     z-index: 1050;
@@ -20,7 +21,7 @@
 }
 
 .modal-children{
-    max-height: 80vh;
+    height: 30vh;
     overflow-y: scroll;
 }
 

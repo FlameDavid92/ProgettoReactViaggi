@@ -34,7 +34,7 @@ export default function Modale({ children, title, click }) {
                         </div>
                     </div>
                     <div className="separatore mb-2"></div>
-                    <div className="row modal-children w-100 m-0">
+                    <div className="row w-100 m-0">
                         {children}
                     </div>
                 </div>
